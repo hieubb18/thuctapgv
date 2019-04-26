@@ -78,7 +78,7 @@ function giangVienGet() {
                     var strDT = row['gvdienthoai'].replace(/ /g,'');
 				if (strEmail == email && (strDT == sdt || strDT == sdt1)) {
                         count++;
-                        strText += "<tr class='hidden'>";
+                        strText += "<tr class='hidden_show' onclick='hideContent();'>";
                         Object.getOwnPropertyNames(row).forEach(function (name) {
                             if (name == 'tuan1-ndbaocao' || name == 'sotc' || name == 'tt' || name == 'gvhoten' || name == 'gvemail' || name == 'gvdienthoai' || name == 'mand' || name == 'nhom' || name == 'mamh' )
                                 return;
@@ -92,7 +92,7 @@ function giangVienGet() {
                             if (name == 'tuan1-ndbaocao')
                             {                           
                                 var val = [].concat(row[name]).join(' / ');
-                                strText +="<tr class='noidung-bc'>"+"<td colspan='8'>" + val + "<table class='dtable'> <tbody> <tr> <th> Tuần báo cáo</th> <th> Nội dung báo cáo</th> </tr> <tr> <td>Tuần 1</td> <td>Nội dung báo cáo tuần 1 <br> Nội dung báo cáo tuần 1 <br> Nội dung báo cáo tuần 1 <br> </td> </tr> <tr> <td>Tuần 2</td> <td>Nội dung báo cáo tuần 2 <br> Nội dung báo cáo tuần 2 <br> Nội dung báo cáo tuần 2 <br> </td> </tr> <tr> <td>Tuần 3</td> <td>Nội dung báo cáo tuần 3 <br> Nội dung báo cáo tuần 3 <br> Nội dung báo cáo tuần 3 <br> </td> </tr> </tbody> </table>" + "</td>" +"</tr>";
+                                strText +="<tr class='noidung-bc'>"+"<td colspan='8'>"  + "<table class='dtable'> <tbody> <tr> <th> Tuần báo cáo</th> <th> Nội dung báo cáo</th> </tr> <tr> <td>Tuần 1</td> <td>" + val + "</td> </tr> </tbody> </table>" + "</td>" +"</tr>";
                             }
                         });
                         //strText += "</tr>";
@@ -117,3 +117,21 @@ function giangVienGet() {
             });
     });
 }
+
+function hideContent(){
+    
+    //document.getElementsByClassName('noidung-bc').classList.toggle("is-hidden");
+    var x = document.querySelectorAll(".noidung-bc");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      if( x[i].style.display == "none")
+      {
+        x[i].style.display = "block";
+      }
+      else
+        x[i].style.display = "none";
+       
+    }
+
+}
+
