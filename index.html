@@ -3,8 +3,9 @@
 <head>
     <title>Cổng Quản Lý Thực Tập Tốt Nghiệp - Học Kỳ Doanh Nghiệp</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <link rel="stylesheet" href="./css/main.css">
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
     <meta charset="utf-8">
     <style>
@@ -41,7 +42,10 @@
             text-decoration: none;
             margin-bottom: 0.5rem;
         }
-
+        .report_{
+            cursor: pointer;
+            color: blue;
+        }
         @keyframes rotate {
             100% {
                 transform: rotate(360deg);
@@ -78,8 +82,9 @@
         }
 
         .loading-spinner {
-            width: 50px;
-            height: 50px;
+            /*width: 250px;
+            height: 250px;*/
+            position: fixed;
         }
 
             .loading-spinner svg {
@@ -138,10 +143,18 @@
 			padding: 10px;
 			color:red;
 		}
+        button.close{
+            display: none;
+        }
 
     </style>
     <script src="./jquery-3.3.1.min.js"></script>
     <script src="./jquery-google-sheet-to-json.min.js"></script>
+     <script src="./bootbox.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="container">
@@ -179,7 +192,7 @@
 
             <div class="loading js-loading is-hidden">
                 <div class="loading-spinner">
-                    <svg><circle cx="25" cy="25" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /></svg>
+                    <img src="./images/loading.svg">
                 </div>
             </div>
 
