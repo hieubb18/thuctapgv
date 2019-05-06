@@ -116,8 +116,8 @@ function xemBaoCao(masv) {
     strTextThongTinSV = "<div class='ten_mssv_sv'>" ;
     strTextThongTinSV += "<label class='lb_ttsv'>Thông tin sinh viên </label></br>";
 
-    strTextCongTy = "<table class='dtable'>";
-    strTextCongTy += "<tr><th>Công Ty</th>  <th>Địa chỉ</th>  <th>Ngày bắt đầu</th>  <th>ĐT Người quản lý</th>  <th>Chức Vụ</th>   <th>Vị trí công việc</th> ";
+    strTextCongTy = "<table class='dtable'>";   
+    strTextCongTy += "<tr><th>Chức vụ</th>  <th>Công ty</th>  <th>Địa chỉ</th>  <th>ĐT Người quản lý</th>  <th>Ngày bắt đầu</th>   <th>Vị trí công việc</th> ";
 
     strTextBaoCao = "<ul id='baocao'>";
     strTextCongTy += "<tr>";
@@ -138,14 +138,17 @@ function xemBaoCao(masv) {
                                 //buid table 1
                                 var val = [].concat(row[name]).join(' / ');
                                 strTextCongTy += "<td>" + val + "</td>";
-                            } else 
+                            } 
+                            else 
                             {
                                 if (name.match(/tuan.*/)) {
-                                    
+    
                                     //buid table 2
                                     var val = [].concat(row[name]).join(' / ');
-                                    strTextBaoCao += "<li id="+name+">" + "<strong id="+name+">" + name + "</strong>";
-                                    strTextBaoCao += "<p>" + val + "</p>" + "</li>";
+                                    strTextBaoCao += "<li id="+name+">" + "<div style='height: 37px;'>" + "<strong id="+name+">" + name + "</strong>";
+                                    strTextBaoCao += "<div class='box-noti'>";
+                                    strTextBaoCao += "<button class='btn-view-ct' id="+"btn-"+name+" onclick=\"xemNoiDung(\'" +"ct"+name+"\');\" >Xem nội dung báo cáo</button><span id=" +"showhide-"+"ct"+name+ " class='new-notif' style='display:none;'></span></div><div id="+"time-"+name+" class='time-baocao'></div><div style='clear:both;'></div></div>"
+                                    strTextBaoCao += "<p id="+"ct"+name+" style='display:none;' >"  + val + "</p>" + "</li>";
 
                                  
                                 }
@@ -159,7 +162,7 @@ function xemBaoCao(masv) {
                 document.querySelector('.js-loading').classList.add('is-hidden');
                 strTextThongTinSV += "</div>";
                 strTextCongTy += "</tr></table>";
-                strTextThoiGian = "<table id='time-report-tuan' class='dtable' ><tr><th>Tuần báo cáo</th><th>Thời gian bắt đầu</th><th>Thời gian kết thúc</th></tr></table>";
+                strTextThoiGian = "<div><div id='time-tuan-1'></div><div id='time-tuan-2'></div><div id='time-tuan-3'></div><div id='time-tuan-4'></div><div id='time-tuan-5'></div></div>";
                 strTextBaoCao += "</ul>";
                 bootbox.alert({
                     message: strTextThongTinSV + strTextCongTy + strTextThoiGian + strTextBaoCao,
@@ -181,10 +184,13 @@ function xemBaoCao(masv) {
 function addClassnameTUAN() {
     // body...
 
-    var arrayChangeID = ['tuan-mot','tuan-hai','tuan-ba','tuan-bon','tuan-nam','tuan-sau','tuan-bay','tuan-tam','tuan-chin','tuan-muoi','tuan-muoi-mot','tuan-muoi-hai'];
-    for (var i = 0; i<arrayChangeID.length ; i++)
+    var liChangeID = ['tuan-mot','tuan-hai','tuan-ba','tuan-bon','tuan-nam','tuan-sau','tuan-bay','tuan-tam','tuan-chin','tuan-muoi','tuan-muoi-mot','tuan-muoi-hai'];
+    var timeChangeID = ['time-tuan-mot','time-tuan-hai','time-tuan-ba','time-tuan-bon','time-tuan-nam','time-tuan-sau','time-tuan-bay',
+                        'time-tuan-tam','time-tuan-chin','time-tuan-muoi','time-tuan-muoi-mot','time-tuan-muoi-hai'];
+    for (var i = 0; i<liChangeID.length ; i++)
     {
-        document.getElementById(arrayChangeID[i]).setAttribute("id",i);
+        document.getElementById(liChangeID[i]).setAttribute("id",i);
+        document.getElementById(timeChangeID[i]).setAttribute("id","time-"+i);
 
     }
 
@@ -234,6 +240,7 @@ function getTime() {
                 $("#thongtin_tuan").html('Lỗi');
             } else {
                 addThongtintuan(ngayBatDau, soTuan);
+                kiemtraNoiDung();
             }
         })
         .fail(function (err) {
@@ -241,7 +248,6 @@ function getTime() {
         });
     });
 }
-
 
 function addThongtintuan(ngayBatDau, soTuan){
     var thoiGianBatDau, thoiGianKetThuc;
@@ -252,21 +258,43 @@ function addThongtintuan(ngayBatDau, soTuan){
     ngayBatDau = new Date(ngayBatDau.setDate(ngayBatDau.getDate()  - 7));
     for (var i = 0; i < soTuan; i++) {
         thongTinTuan = [];
-        thongTinTuan.push("Tuần " + (i + 1));
         thoiGianBatDau = new Date(ngayBatDau.setDate(ngayBatDau.getDate() + 7));
         thongTinTuan.push("Từ "+thoiGianBatDau.toLocaleDateString('vi-VN'));
         thoiGianKetThuc = new Date(thoiGianBatDau.setDate(thoiGianBatDau.getDate() + 6));
-        thongTinTuan.push("Đến "+thoiGianKetThuc.toLocaleDateString('vi-VN'));
+        thongTinTuan.push(" đến "+thoiGianKetThuc.toLocaleDateString('vi-VN'));
         danhSachTuan.push(thongTinTuan);
     }
-    var table = document.getElementById("time-report-tuan");
+    // var table = document.getElementById("time-report-tuan");
     for(var i = 0; i < danhSachTuan.length; i++)
     {
-      var newRow = table.insertRow(table.length);
-      for(var j = 0; j < danhSachTuan[i].length; j++)
-      {
-          var cell = newRow.insertCell(j);
-          cell.innerHTML = danhSachTuan[i][j];
-      }
-  }
+        document.getElementById('time-'+i).innerHTML = danhSachTuan[i];
+    }
+}
+function xemNoiDung(x){
+
+    if(document.getElementById(x).style.display == 'none' ){
+        document.getElementById(x).style.display = '';
+    }
+    else{
+        document.getElementById(x).style.display = 'none';
+    }
+}
+
+function kiemtraNoiDung(){
+    var arrayND = ['cttuan-mot','cttuan-hai','cttuan-ba','cttuan-bon','cttuan-nam','cttuan-sau','cttuan-bay','cttuan-tam','cttuan-chin','cttuan-muoi','cttuan-muoi-mot','cttuan-muoi-hai',];
+    var i;
+    for(i = 0 ; i< arrayND.length; i++)
+    {
+        var content_ = document.getElementById(arrayND[i]).innerHTML;
+        if(content_ != '---' || content_.length >= 5 )
+            {
+                document.getElementById('showhide-'+arrayND[i]).style.display = '';
+                document.getElementById('showhide-'+arrayND[i]).innerHTML = 'Đã nộp';
+
+            }
+
+        else document.getElementById('showhide-'+arrayND[i]).style.display = 'none';
+    }
+    
+    
 }
