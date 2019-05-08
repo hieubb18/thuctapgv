@@ -83,7 +83,7 @@ function giangVienGet() {
 
                         Object.getOwnPropertyNames(row).forEach(function (name) {
 
-                            if (name == 'sotc' || name == 'tt' || name == 'gvhoten' || name == 'gvemail' || name == 'gvdienthoai' || name == 'mand' || name == 'nhom' || name == 'mamh' || name === 'congty' || name === 'diachi' || name === 'ngaybatdau' || name === 'dienthoaiquanly' || name === 'chucvu' || name === 'vitricongviec' || name.match(/tuan.*/))
+                            if (name == 'sotc' || name == 'tt' || name == 'gvhoten' || name == 'gvemail' || name == 'gvdienthoai' || name == 'mand' || name == 'nhom' || name == 'mamh' || name === 'congty' || name === 'website' || name === 'ngaybatdau' || name === 'ngaydukienketthuc' || name === 'hotennguoiquanli' || name === 'dienthoaiquanly' || name === 'emailnguoiquanli' || name === 'chucvu' || name === 'vitricongviec' || name.match(/tuan.*/))
                                 return;
                             var val = [].concat(row[name]).join(' / ');
                             strText += "<td>" + val + "</td>";
@@ -117,38 +117,41 @@ function xemBaoCao(masv) {
     strTextThongTinSV += "<label class='lb_ttsv'>Thông tin sinh viên </label></br>";
 
     strTextCongTy = "<table class='dtable'>";   
-    strTextCongTy += "<tr><th>Chức vụ</th>  <th>Công ty</th>  <th>Địa chỉ</th>  <th>ĐT Người quản lý</th>  <th>Ngày bắt đầu</th>   <th>Vị trí công việc</th> ";
+    strTextCongTy += "<tr><th>Chức vụ</th>  <th>Công ty</th>  <th>Điện thoại QL</th> <th>Email người QL</th> <th>Họ tên quản lý</th> <th>Ngày bắt đầu</th>  <th>Ngày dự kiến kết thúc</th>     <th>Vị trí công việc</th> <th>Website</th> ";
 
-    strTextBaoCao = "<ul id='baocao'>";
+    strTextBaoCao = "<div id='baocao'>";
+    strTextBaoCao += "<div class='body-baocao'>";
     strTextCongTy += "<tr>";
     document.querySelector('.js-loading').classList.remove('is-hidden');
     worksheets.forEach(function (worksheet) {
         $.googleSheetToJSON('1nO2nV65Vi3dZWGlaIOXLEc-_JWEZK16XFbjQVH_3Q0U', worksheet)
-            .done(function (rows) {
+        .done(function (rows) {
                 rows.forEach(function (row) {
                     if (row["masv"] == masv) {
                         Object.getOwnPropertyNames(row).forEach(function (name) {
                             if(name === 'masv' ||  name === 'hoten')
                             {
+                                //build div show info
                                 var val = [].concat(row[name]).join(' / ');
                                 strTextThongTinSV += "<span class='ttsv'>" + "<b>" + val + "</b>" + "</span> </br>";
                             }
-
-                            if (name === 'congty' || name === 'diachi' || name === 'ngaybatdau' || name === 'dienthoaiquanly' || name === 'chucvu' || name === 'vitricongviec') {
+                            if (name === 'congty' || name === 'website' || name === 'ngaybatdau' || name === 'ngaydukienketthuc' || name === 'hotennguoiquanli' || name === 'dienthoaiquanly' || name === 'chucvu' || name === 'emailnguoiquanli' || name === 'vitricongviec') 
+                            {
                                 //buid table 1
                                 var val = [].concat(row[name]).join(' / ');
                                 strTextCongTy += "<td>" + val + "</td>";
-                            } 
+                            }
+                             
                             else 
                             {
                                 if (name.match(/tuan.*/)) {
     
                                     //buid table 2
                                     var val = [].concat(row[name]).join(' / ');
-                                    strTextBaoCao += "<li id="+name+">" + "<div style='height: 37px;'>" + "<strong id="+name+">" + name + "</strong>";
+                                    strTextBaoCao += "<div id="+name+" class='sort'>" + "<div class='box-header-report' style='height: 37px;'>" + "<strong id="+name+">" + name + "</strong>";
                                     strTextBaoCao += "<div class='box-noti'>";
                                     strTextBaoCao += "<button class='btn-view-ct' id="+"btn-"+name+" onclick=\"xemNoiDung(\'" +"ct"+name+"\');\" >Xem nội dung báo cáo</button><span id=" +"showhide-"+"ct"+name+ " class='new-notif' style='display:none;'></span></div><div id="+"time-"+name+" class='time-baocao'></div><div style='clear:both;'></div></div>"
-                                    strTextBaoCao += "<p id="+"ct"+name+" style='display:none;' >"  + val + "</p>" + "</li>";
+                                    strTextBaoCao += "<div id="+"ct"+name+" class='view-report' style='display:none;' >"  + val + "</div>";
 
                                  
                                 }
@@ -162,10 +165,9 @@ function xemBaoCao(masv) {
                 document.querySelector('.js-loading').classList.add('is-hidden');
                 strTextThongTinSV += "</div>";
                 strTextCongTy += "</tr></table>";
-                strTextThoiGian = "<div><div id='time-tuan-1'></div><div id='time-tuan-2'></div><div id='time-tuan-3'></div><div id='time-tuan-4'></div><div id='time-tuan-5'></div></div>";
-                strTextBaoCao += "</ul>";
+                strTextBaoCao += "</div></div>";
                 bootbox.alert({
-                    message: strTextThongTinSV + strTextCongTy + strTextThoiGian + strTextBaoCao,
+                    message: strTextThongTinSV + strTextCongTy  + strTextBaoCao,
                     size: 'large'
                 });
                 
@@ -196,7 +198,7 @@ function addClassnameTUAN() {
 
     //tag id chuyen ve kieu so
     setTenTuan();
-    $("#baocao li").sort(function (a, b) {
+    $("#baocao .sort").sort(function (a, b) {
         return parseInt(a.id) - parseInt(b.id);
     }).each(function () {
         var elem = $(this);
@@ -270,6 +272,8 @@ function addThongtintuan(ngayBatDau, soTuan){
         document.getElementById('time-'+i).innerHTML = danhSachTuan[i];
     }
 }
+
+
 function xemNoiDung(x){
 
     if(document.getElementById(x).style.display == 'none' ){
