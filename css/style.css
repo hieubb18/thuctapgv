@@ -345,3 +345,21 @@ span.ttsv b {
       height: 34px;
     }
 
+    .modal-content{
+      min-width: 768px;
+    }
+    @media (max-width: 768px) {
+      .time-baocao{
+        width: 47%;
+      }
+    }
+    @media screen and (min-width: 769px) { 
+      .time-baocao{
+        width: 49%;
+      }
+    }
+    @media screen and (min-width: 992px) { 
+      .time-baocao{
+        width: 57%;
+      }
+    }
