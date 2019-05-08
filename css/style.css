@@ -233,7 +233,7 @@ button {
 
 
 /* Sorting ul li */
-ul#baocao strong {
+/* ul#baocao strong {
   text-transform: capitalize;
 }
 ul#baocao li {
@@ -243,7 +243,7 @@ ul#baocao li {
 ul#baocao {
   border: 1px solid lightgrey;
   padding: 14px 16px;
-}
+} */
 
 
 /* style header thông tin sinh viên */
@@ -272,12 +272,13 @@ span.ttsv b {
 /* Custom manager report view flowing: thuctapgv/view */
 
 
-  ul#baocao li p {
-    margin: 18px auto;
+  #baocao .sort .view-report {
+    margin: 18px 0 18px;
     border: 1px dotted lightgray;
     padding: 14px 16px;
+    width: 97.69%;
   }
-  ul#baocao li strong {
+  #baocao .sort .box-header-report>strong {
     float: left;
     padding: 8px 16px;
     background-color: #C7E5FC;
@@ -352,14 +353,24 @@ span.ttsv b {
       .time-baocao{
         width: 47%;
       }
+      #baocao .sort .view-report {
+        width: 95%;
+      }
     }
     @media screen and (min-width: 769px) { 
       .time-baocao{
         width: 49%;
+      }
+      #baocao .sort .view-report {
+        width: 95%;
       }
     }
     @media screen and (min-width: 992px) { 
       .time-baocao{
         width: 57%;
       }
+      #baocao .sort .view-report {
+        width: 97.69%;
+      }
+
     }
