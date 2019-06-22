@@ -6,6 +6,8 @@
        <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+
 	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
     <meta charset="utf-8">
     <style>
@@ -165,12 +167,12 @@
                 <h2 style="color: blue; font-weight: bold;">KHOA CÔNG NGHỆ THÔNG TIN</h2>
             </div>
         </div>
-        <div id="main-content">          
+        <div id="main-content">
             <h1 style="text-align:center; color: red">CỔNG QUẢN LÝ THỰC TẬP TỐT NGHIỆP </h1>
             <h1 style="text-align: center; color: red">HỌC KỲ DOANH NGHIỆP</h1>
             <form name="submit-GV">
                 <h3 style="display:inline">DÀNH CHO GIẢNG VIÊN</h3>
-				
+
 					<a class="btn-tuyendung" href="https://www.hutech.edu.vn/khoacntt/doanh-nghiep/tuyen-dung" target="_blank" >TÌM CTY THỰC TẬP</a>
 				<p></p>
                 <div class="form-wrapper">
@@ -181,13 +183,25 @@
                     <label for="txtGVSDT">SĐT</label>
                     <input id="inGVSDT" type="number" name="txtGVSDT" placeholder="Bạn phải nhập thêm SĐT để kiểm tra" class="form-control" required="" oninvalid="this.setCustomValidity('Nhập SĐT')" oninput="setCustomValidity('')">
                 </div>
+                <div class="form-wrapper">
+                    <label for="txtPassword">Nhập mật khẩu</label>
+                    <input id="inGVPassword" type="password" name="txtPass" placeholder="Mật khẩu giảng viên" class="form-control" required="" oninvalid="this.setCustomValidity('Nhập mật khẩu')" oninput="setCustomValidity('')">
+                </div>
                 <button id="btnDoGV" type="button" onclick="stepGetGiangVien(); return false;">TRA CỨU DANH SÁCH HƯỚNG DẪN</button>
-				
+
             </form>
-			<div id="countHDGV" style="text-align:right;color:red; padding-right:10px">
+
+
+            <div id="info">
+
+              <div id="profile_gv">
+              </div>
+              <div id="countHDGV" style="text-align:right;color:red; padding-right:10px">
+                    </div>
+              <div id="InfoGV" style="padding: 10px">
+              </div>
             </div>
-            <div id="InfoGV" style="padding: 10px">
-            </div>
+
 
             <div class="loading js-loading is-hidden">
                 <div class="loading-spinner">
@@ -196,7 +210,11 @@
             </div>
 
         </div>
+
         <script type="text/javascript" src="./do_get_info.js">
+        </script>
+
+        <script type="text/javascript" src="./update.js">
         </script>
         <script src="./prefixfree.min.js"></script>
         <script src="./formdata-poly.js"></script>

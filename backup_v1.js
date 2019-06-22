@@ -52,7 +52,6 @@ function giangVienGet() {
 
     var email = $.trim($("input[name='txtGVEmail']").val()).replace(/ /g, '');
     var sdt = $.trim($("input[name='txtGVSDT']").val()).replace(/ /g, '');
-    var pass = $.trim($("input[name='txtPass']").val()).replace(/ /g, '');
 
     var sdt1 = sdt.substring(1, sdt.length);
 
@@ -60,100 +59,53 @@ function giangVienGet() {
         alert("VUI LÒNG NHẬP ĐỦ THÔNG TIN EMAIL VÀ SỐ ĐIỆN THOẠI");
         return false;
     }
-    $("#profile_gv").html("");
+
     $("#InfoGV").html("");
     $("#countHDGV").html("");
 
-        $.googleSheetToJSON('1nO2nV65Vi3dZWGlaIOXLEc-_JWEZK16XFbjQVH_3Q0U', 6)
+    var worksheets = [
+        '', // defaults to first worksheet without id
+        'ouab0ad'
+    ];
+    worksheets.forEach(function (worksheet) {
+        $.googleSheetToJSON('1nO2nV65Vi3dZWGlaIOXLEc-_JWEZK16XFbjQVH_3Q0U', worksheet)
             .done(function (rows) {
+                var strText = "<table class='dtable'>";
+                strText += "<tr><th>Tên SV</th>  <th>Lớp</th>  <th>Mã SV</th>  <th>Ngành</th>  <th>Ngày sinh</th>   <th>Email SV</th>  <th>SĐT SV</th>  <th>Môn</th><th>Xem Báo Cáo</th> ";
                 var count = 0;
+                var newMaSV;
                 rows.forEach(function (row) {
                     var strEmail = row['gvemail'];
                     var strDT = row['gvdienthoai'];
-                    var strPass = row['password'];
-
-                    if (strPass == pass && strEmail == email && (strDT == sdt || strDT == sdt1)) {
+                    if (strEmail == email && (strDT == sdt || strDT == sdt1)) {
                         count++;
-                        $.googleSheetToJSON('1nO2nV65Vi3dZWGlaIOXLEc-_JWEZK16XFbjQVH_3Q0U', 1)
-                            .done(function (rows) {
+                        strText += "<tr>";
 
-                                var strTool = "<div id='popup-wrap-box'> <div class='popup-wrap'> <div class='popup-box'> <div class='popup-content'> </div> <a class='close-btn popup-close' href='#'>x</a> </div> </div> </div>";
+                        Object.getOwnPropertyNames(row).forEach(function (name) {
 
-                                strTool += "<div class='box-user-thongbao'> <a class='btn popup-btn slide-right' href='#' onclick='profileGet();'>Trang cá nhân </a> <marquee class='marquee-slide-right'>Thông báo: Yêu cầu giảng viên đỗi mật khẩu tra cứu thông tin</marquee> </div>";
-
-
-                                $(document).ready(function() {
-                                    $('.popup-btn').click(function(e) {
-                                      $('.popup-wrap').fadeIn(500);
-                                      $('.popup-box').removeClass('transform-out').addClass('transform-in');
-
-                                      e.preventDefault();
-                                    });
-
-                                    $('.popup-close').click(function(e) {
-                                      $('.popup-wrap').fadeOut(500);
-                                      $('.popup-box').removeClass('transform-in').addClass('transform-out');
-
-                                      e.preventDefault();
-                                    });
-                                  });
-                                var strText = "<table class='dtable'>";
-                                strText += "<tr><th>Tên SV</th>  <th>Lớp</th>  <th>Mã SV</th>  <th>Ngành</th>  <th>Ngày sinh</th>   <th>Email SV</th>  <th>SĐT SV</th>  <th>Môn</th><th>Xem Báo Cáo</th> ";
-                                var count = 0;
-                                var newMaSV;
-                                rows.forEach(function (row) {
-                                    var strEmail = row['gvemail'];
-                                    var strDT = row['gvdienthoai'];
-                                    if (strEmail == email && (strDT == sdt || strDT == sdt1)) {
-                                        count++;
-                                        strText += "<tr>";
-
-                                        Object.getOwnPropertyNames(row).forEach(function (name) {
-
-                                            if (name == 'sotc' || name == 'tt' || name == 'gvhoten' || name == 'gvemail' || name == 'gvdienthoai' || name == 'mand' || name == 'nhom' || name == 'mamh' || name === 'congty' || name === 'website' || name === 'ngaybatdau' || name === 'ngaydukienketthuc' || name === 'hotennguoiquanli' || name === 'dienthoaiquanly' || name === 'emailnguoiquanli' || name === 'chucvu' || name === 'vitricongviec' || name.match(/tuan.*/))
-                                                return;
-                                            var val = [].concat(row[name]).join(' / ');
-                                            strText += "<td>" + val + "</td>";
-                                            if (name == "masv")
-                                                newMaSV = row[name];
-
-
-
-                                        });
-                                        strText += "<td><span onclick='xemBaoCao(" + newMaSV + ")' class='report_'>XEM BÁO CÁO</span></td>";
-                                        strText += "</tr>";
-                                    }
-                                });
-                                if (count == 0)
-                                    $("#InfoGV").html('Không tìm thấy thông tin');
-                                else {
-                                    $("#profile_gv").html(strTool);
-                                    $("#InfoGV").html(strText);
-                                    $("#countHDGV").html("<h2>SLHD: " + count + "</h2>");
-                                }
-                            })
-                            .fail(function (err) {
-                                // console.log('error!', err);
-                                // alert("LỖI DO MÁY CHỦ GOOGLE SHEET");
-                            });
-
-
+                            if (name == 'sotc' || name == 'tt' || name == 'gvhoten' || name == 'gvemail' || name == 'gvdienthoai' || name == 'mand' || name == 'nhom' || name == 'mamh' || name === 'congty' || name === 'website' || name === 'ngaybatdau' || name === 'ngaydukienketthuc' || name === 'hotennguoiquanli' || name === 'dienthoaiquanly' || name === 'emailnguoiquanli' || name === 'chucvu' || name === 'vitricongviec' || name.match(/tuan.*/))
+                                return;
+                            var val = [].concat(row[name]).join(' / ');
+                            strText += "<td>" + val + "</td>";
+                            if (name == "masv")
+                                newMaSV = row[name];
+                        });
+                        strText += "<td><span onclick='xemBaoCao(" + newMaSV + ")' class='report_'>XEM BÁO CÁO</span></td>";
+                        strText += "</tr>";
                     }
                 });
-                var strBoxError = "<div class='isa_error'> <i class='fa fa-times-circle'></i> Tra cứu thông tin thất bại. </div>";
-                var strBoxSucess = "<div class='isa_success'> <i class='fa fa-check'></i> Tra cứu thông tin thành công </div>";
                 if (count == 0)
-                    $("#InfoGV").html(strBoxError);
+                    $("#InfoGV").html('Không tìm thấy thông tin');
                 else {
-                    $("#InfoGV").html(strBoxSucess);
-
-                //   THONG BAO LOI TU HE THONG
+                    $("#InfoGV").html(strText);
+                    $("#countHDGV").html("<h2>SLHD: " + count + "</h2>");
                 }
             })
             .fail(function (err) {
                 // console.log('error!', err);
                 // alert("LỖI DO MÁY CHỦ GOOGLE SHEET");
             });
+    });
 }
 
 function xemBaoCao(masv) {
@@ -231,72 +183,6 @@ function xemBaoCao(masv) {
 
     });
 
-
-}
-
-
-// Build profile user
-function profileGet(){
-  var email = $.trim($("input[name='txtGVEmail']").val()).replace(/ /g, '');
-  var sdt = $.trim($("input[name='txtGVSDT']").val()).replace(/ /g, '');
-  var pass = $.trim($("input[name='txtPass']").val()).replace(/ /g, '');
-  var sdt1 = sdt.substring(1, sdt.length);
-
-   var strTextProfile = "";
-
-
-  $(".popup-content").html("");
-      $.googleSheetToJSON('1nO2nV65Vi3dZWGlaIOXLEc-_JWEZK16XFbjQVH_3Q0U', 6)
-          .done(function (rows) {
-              var count = 0;
-              rows.forEach(function (row) {
-                var strEmail = row['gvemail'];
-                var strDT = row['gvdienthoai'];
-                var strPass = row['password'];
-
-                if (strPass == pass)
-                if (strPass == pass && strEmail == email && (strDT == sdt || strDT == sdt1)) {
-                      count++;
-
-                        //$("input[name=txtGVEmail_Profile]").val(row['gvemail']);
-                        // var val = row['gvemail'];
-                        strTextProfile += "<div class='form-wrapper' style='display:none;'> <label for='txtIDGV'>Mã giảng viên</label> <input id='idgv_prof' type='text' name='txtIDGV' class='form-control' readonly value="+row['idgv']+"> </div>";
-
-                        strTextProfile += "<h3 style='text-align:center;COLOR:darkred'>THÔNG TIN GIẢNG VIÊN</h3>";
-                        strTextProfile += "<div class='form-wrapper'> <label for='txtGVEmail_Profile'>Email</label> <input type='email' name='txtGVEmail' placeholder='Địa chỉ thư điện tử?' class='form-control' required='' oninvalid='this.setCustomValidity()' oninput='setCustomValidity()' readonly value="+row['gvemail']+"> </div>";
-
-                        //  $("input[name=txtGVSDT]").val(row[name]);
-                          strTextProfile += "<div class='form-wrapper' > <label for='txtGVEmail_Profile'>Số điện thoại</label> <input type='text' name='txtGVEmail_Profile' placeholder='Số điện thoại giảng viên' class='form-control' required='' oninvalid='this.setCustomValidity()' oninput='setCustomValidity()' readonly value="+row['gvdienthoai']+"> </div>";
-
-                          strTextProfile += "<form id='update_form_gv' onsubmit='update_pass_value(); return false;' >";
-                          strTextProfile += "<div class='form-wrapper'> <label for='txtGVEmail_Profile'>Mật khẩu</label> <input id='passgv_prof' type='password' placeholder='Mật khẩu mới?' class='form-control' onkeypress='return BlockSpace()' required=''  > </div>";
-                          strTextProfile += "<div class='form-wrapper'> <label for='txtGVEmail_Profile'>Nhập lại mật khẩu</label> <input id='passgv_prof_repeat' type='password' placeholder='Nhập lại mật khẩu?' class='form-control' onkeypress='return BlockSpace()' required='' > </div>";
-
-                          strTextProfile += "<span class='flit-left'> <input type='checkbox' onclick='showhidepass()'> <b>Hiễn thị mật khẩu</b> </span>";
-
-                          strTextProfile += "<input type='submit' class='form-control flit-right' value='Cập nhật'>";
-                          strTextProfile += "</form><p id='re'></p>";
-
-                          //
-                          // strTextProfile += "<a onclick='update_pass_value();' class='form-control update_infoGV'>Cập nhật</a><p id='re'></p>";
-
-
-                    }
-                  })
-
-
-                  if (count == 0) {
-                      $(".popup-content").html("<p style='text-align:center; font-size: 16px;'>Không tìm thấy thông tin hoặc bạn đã thay đỗi mật khẩu - xin vui lòng refresh trang và đăng nhập lại hoặc click <a href='/'>TRANG CHỦ </a> </p>");
-                  } else {
-                      // strTextProfile += "</form>";
-                      $(".popup-content").html(strTextProfile);
-                  }
-              })
-
-
-          .fail(function (err) {
-              //
-          });
 
 }
 
@@ -425,16 +311,3 @@ function kiemtraNoiDung(){
 
 
 }
-$('.popup-btn').click(function(e) {
-  $('.popup-wrap').fadeIn(500);
-  $('.popup-box').removeClass('transform-out').addClass('transform-in');
-
-  e.preventDefault();
-});
-
-$('.popup-close').click(function(e) {
-  $('.popup-wrap').fadeOut(500);
-  $('.popup-box').removeClass('transform-in').addClass('transform-out');
-
-  e.preventDefault();
-});
