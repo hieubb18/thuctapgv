@@ -351,6 +351,8 @@ span.ttsv b {
     .modal-content{
       min-width: 768px;
     }
+
+
     @media (max-width: 768px) {
       .time-baocao{
         width: 47%;
@@ -459,6 +461,7 @@ padding:12px;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
   border-radius: 3px;
   background: #fff;
+  overflow: auto;
 }
 
 .popup-box .close-btn {
@@ -503,6 +506,9 @@ padding:12px;
 }
 
 /* Update profile_gv */
+#update_form_gv{
+  padding: 0;
+}
 #profile_gv {
     float: left;
     margin: 20px 0 20px 11px;
@@ -543,4 +549,66 @@ input.form-control.flit-right:hover
 }
 #re{
   clear: both;
+}
+
+/* Custom error page */
+.go_to_home {
+    margin: 0 auto;
+    width: 112px;
+    height: 50px;
+    margin-top: 30px;
+}
+.go_to_home a {
+    margin: 0 auto;
+    width: 150px;
+    background-color: orange;
+    color: white;
+    padding: 14px 16px;
+    font-weight: bold;
+    text-align: center;
+}
+h2.h2_error {
+    width: 349px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: -80px;
+    background-color: white;
+    text-align: center;
+    font-size: 22px;
+}
+h1.h1_error{
+  font-size: 150px;
+  text-align: center;
+
+}
+@media screen and (min-width: 480px){
+  .popup-box {
+    height: 68%;
+    width: 400px;
+  }
+  .box-user-thongbao >a {
+    margin-left: 120px;
+  }
+}
+
+
+
+@media screen and (min-width: 960px){
+  .popup-box {
+    height: 59%;
+    width: 80%;
+  }
+  .box-user-thongbao >a {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1025px){
+  .popup-box {
+    height: 59%;
+    width: 800px;
+  }
+  .box-user-thongbao >a {
+    margin-left: 0;
+  }
 }

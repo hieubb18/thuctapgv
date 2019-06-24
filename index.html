@@ -170,7 +170,7 @@
         <div id="main-content">
             <h1 style="text-align:center; color: red">CỔNG QUẢN LÝ THỰC TẬP TỐT NGHIỆP </h1>
             <h1 style="text-align: center; color: red">HỌC KỲ DOANH NGHIỆP</h1>
-            <form name="submit-GV">
+            <form name="submit-GV" id="submit-GV">
                 <h3 style="display:inline">DÀNH CHO GIẢNG VIÊN</h3>
 
 					<a class="btn-tuyendung" href="https://www.hutech.edu.vn/khoacntt/doanh-nghiep/tuyen-dung" target="_blank" >TÌM CTY THỰC TẬP</a>
@@ -185,8 +185,10 @@
                 </div>
                 <div class="form-wrapper">
                     <label for="txtPassword">Nhập mật khẩu</label>
-                    <input id="inGVPassword" type="password" name="txtPass" placeholder="Mật khẩu giảng viên" class="form-control" required="" oninvalid="this.setCustomValidity('Nhập mật khẩu')" oninput="setCustomValidity('')">
+                    <input id="hash_input_p" type="password" placeholder="Mật khẩu giảng viên" class="form-control" required="" oninvalid="this.setCustomValidity('Nhập mật khẩu')" oninput="setCustomValidity('')">
+                    <input type="password" id="hash_output_p" name="txtPass" hidden readonly focus="disabled" style="cursor:not-allowed;">
                 </div>
+
                 <button id="btnDoGV" type="button" onclick="stepGetGiangVien(); return false;">TRA CỨU DANH SÁCH HƯỚNG DẪN</button>
 
             </form>
@@ -210,12 +212,10 @@
             </div>
 
         </div>
+        <script type="text/javascript" src="./ggsheet_secure_hash.js"></script>
+        <script type="text/javascript" src="./do_custom_info.js"></script>
+        <script type="text/javascript" src="./do_get_info.js"></script>
 
-        <script type="text/javascript" src="./do_get_info.js">
-        </script>
-
-        <script type="text/javascript" src="./update.js">
-        </script>
         <script src="./prefixfree.min.js"></script>
         <script src="./formdata-poly.js"></script>
         <script src="./promise-polyfill.js"></script>

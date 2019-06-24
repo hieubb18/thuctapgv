@@ -1,440 +1,444 @@
-// Get the input field
-var input = document.getElementById("inGVSDT");
-// Execute a function when the user releases a key on the keyboard
-input.addEventListener("keyup", function (event) {
-    // Number 13 is the "Enter" key on the keyboard
-    if (event.keyCode === 13) {
-        // Cancel the default action, if needed
-        event.preventDefault();
-        // Trigger the button element with a click
-        document.getElementById("btnDoGV").click();
-    }
+var _0xab8f = ["\x69\x6E\x47\x56\x53\x44\x54", "\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64", "\x6B\x65\x79\x75\x70", "\x6B\x65\x79\x43\x6F\x64\x65", "\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74", "\x63\x6C\x69\x63\x6B", "\x62\x74\x6E\x44\x6F\x47\x56", "\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72", "\x74\x68\x65\x6E", "\x69\x73\x2D\x68\x69\x64\x64\x65\x6E", "\x72\x65\x6D\x6F\x76\x65", "\x63\x6C\x61\x73\x73\x4C\x69\x73\x74", "\x2E\x6A\x73\x2D\x6C\x6F\x61\x64\x69\x6E\x67", "\x71\x75\x65\x72\x79\x53\x65\x6C\x65\x63\x74\x6F\x72", "\x61\x64\x64", "", "\x72\x65\x70\x6C\x61\x63\x65", "\x76\x61\x6C", "\x69\x6E\x70\x75\x74\x5B\x6E\x61\x6D\x65\x3D\x27\x74\x78\x74\x47\x56\x45\x6D\x61\x69\x6C\x27\x5D", "\x74\x72\x69\x6D", "\x69\x6E\x70\x75\x74\x5B\x6E\x61\x6D\x65\x3D\x27\x74\x78\x74\x47\x56\x53\x44\x54\x27\x5D", "\x69\x6E\x70\x75\x74\x5B\x6E\x61\x6D\x65\x3D\x27\x74\x78\x74\x50\x61\x73\x73\x27\x5D", "\x6C\x65\x6E\x67\x74\x68", "\x73\x75\x62\x73\x74\x72\x69\x6E\x67", "\x56\x55\x49\x20\x4C\xD2\x4E\x47\x20\x4E\x48\u1EAC\x50\x20\u0110\u1EE6\x20\x54\x48\xD4\x4E\x47\x20\x54\x49\x4E\x20\x45\x4D\x41\x49\x4C\x20\x56\xC0\x20\x53\u1ED0\x20\u0110\x49\u1EC6\x4E\x20\x54\x48\x4F\u1EA0\x49", "\x68\x74\x6D\x6C", "\x23\x70\x72\x6F\x66\x69\x6C\x65\x5F\x67\x76", "\x23\x49\x6E\x66\x6F\x47\x56", "\x23\x63\x6F\x75\x6E\x74\x48\x44\x47\x56", "\x66\x61\x69\x6C", "\x67\x76\x65\x6D\x61\x69\x6C", "\x67\x76\x64\x69\x65\x6E\x74\x68\x6F\x61\x69", "\x67\x76\x68\x61\x73\x68", "\x3C\x64\x69\x76\x20\x69\x64\x3D\x27\x70\x6F\x70\x75\x70\x2D\x77\x72\x61\x70\x2D\x62\x6F\x78\x27\x3E\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x70\x6F\x70\x75\x70\x2D\x77\x72\x61\x70\x27\x3E\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x70\x6F\x70\x75\x70\x2D\x62\x6F\x78\x27\x3E\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x70\x6F\x70\x75\x70\x2D\x63\x6F\x6E\x74\x65\x6E\x74\x27\x3E\x20\x3C\x2F\x64\x69\x76\x3E\x20\x3C\x61\x20\x63\x6C\x61\x73\x73\x3D\x27\x63\x6C\x6F\x73\x65\x2D\x62\x74\x6E\x20\x70\x6F\x70\x75\x70\x2D\x63\x6C\x6F\x73\x65\x27\x20\x68\x72\x65\x66\x3D\x27\x23\x27\x3E\x78\x3C\x2F\x61\x3E\x20\x3C\x2F\x64\x69\x76\x3E\x20\x3C\x2F\x64\x69\x76\x3E\x20\x3C\x2F\x64\x69\x76\x3E", "\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x62\x6F\x78\x2D\x75\x73\x65\x72\x2D\x74\x68\x6F\x6E\x67\x62\x61\x6F\x27\x3E\x20\x3C\x61\x20\x63\x6C\x61\x73\x73\x3D\x27\x62\x74\x6E\x20\x70\x6F\x70\x75\x70\x2D\x62\x74\x6E\x20\x73\x6C\x69\x64\x65\x2D\x72\x69\x67\x68\x74\x27\x20\x68\x72\x65\x66\x3D\x27\x23\x27\x20\x6F\x6E\x63\x6C\x69\x63\x6B\x3D\x27\x70\x72\x6F\x66\x69\x6C\x65\x47\x65\x74\x28\x29\x3B\x27\x3E\x54\x72\x61\x6E\x67\x20\x63\xE1\x20\x6E\x68\xE2\x6E\x20\x3C\x2F\x61\x3E\x20\x3C\x6D\x61\x72\x71\x75\x65\x65\x20\x63\x6C\x61\x73\x73\x3D\x27\x6D\x61\x72\x71\x75\x65\x65\x2D\x73\x6C\x69\x64\x65\x2D\x72\x69\x67\x68\x74\x27\x3E\x54\x68\xF4\x6E\x67\x20\x62\xE1\x6F\x3A\x20\x59\xEA\x75\x20\x63\u1EA7\x75\x20\x67\x69\u1EA3\x6E\x67\x20\x76\x69\xEA\x6E\x20\u0111\u1ED7\x69\x20\x6D\u1EAD\x74\x20\x6B\x68\u1EA9\x75\x20\x74\x72\x61\x20\x63\u1EE9\x75\x20\x74\x68\xF4\x6E\x67\x20\x74\x69\x6E\x3C\x2F\x6D\x61\x72\x71\x75\x65\x65\x3E\x20\x3C\x2F\x64\x69\x76\x3E", "\x66\x61\x64\x65\x49\x6E", "\x2E\x70\x6F\x70\x75\x70\x2D\x77\x72\x61\x70", "\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D\x2D\x69\x6E", "\x61\x64\x64\x43\x6C\x61\x73\x73", "\x74\x72\x61\x6E\x73\x66\x6F\x72\x6D\x2D\x6F\x75\x74", "\x72\x65\x6D\x6F\x76\x65\x43\x6C\x61\x73\x73", "\x2E\x70\x6F\x70\x75\x70\x2D\x62\x6F\x78", "\x2E\x70\x6F\x70\x75\x70\x2D\x62\x74\x6E", "\x66\x61\x64\x65\x4F\x75\x74", "\x2E\x70\x6F\x70\x75\x70\x2D\x63\x6C\x6F\x73\x65", "\x72\x65\x61\x64\x79", "\x3C\x74\x61\x62\x6C\x65\x20\x63\x6C\x61\x73\x73\x3D\x27\x64\x74\x61\x62\x6C\x65\x27\x3E", "\x3C\x74\x72\x3E\x3C\x74\x68\x3E\x54\xEA\x6E\x20\x53\x56\x3C\x2F\x74\x68\x3E\x20\x20\x3C\x74\x68\x3E\x4C\u1EDB\x70\x3C\x2F\x74\x68\x3E\x20\x20\x3C\x74\x68\x3E\x4D\xE3\x20\x53\x56\x3C\x2F\x74\x68\x3E\x20\x20\x3C\x74\x68\x3E\x4E\x67\xE0\x6E\x68\x3C\x2F\x74\x68\x3E\x20\x20\x3C\x74\x68\x3E\x4E\x67\xE0\x79\x20\x73\x69\x6E\x68\x3C\x2F\x74\x68\x3E\x20\x20\x20\x3C\x74\x68\x3E\x45\x6D\x61\x69\x6C\x20\x53\x56\x3C\x2F\x74\x68\x3E\x20\x20\x3C\x74\x68\x3E\x53\u0110\x54\x20\x53\x56\x3C\x2F\x74\x68\x3E\x20\x20\x3C\x74\x68\x3E\x4D\xF4\x6E\x3C\x2F\x74\x68\x3E\x3C\x74\x68\x3E\x58\x65\x6D\x20\x42\xE1\x6F\x20\x43\xE1\x6F\x3C\x2F\x74\x68\x3E\x20", "\x3C\x74\x72\x3E", "\x73\x6F\x74\x63", "\x74\x74", "\x67\x76\x68\x6F\x74\x65\x6E", "\x6D\x61\x6E\x64", "\x6E\x68\x6F\x6D", "\x6D\x61\x6D\x68", "\x63\x6F\x6E\x67\x74\x79", "\x77\x65\x62\x73\x69\x74\x65", "\x6E\x67\x61\x79\x62\x61\x74\x64\x61\x75", "\x6E\x67\x61\x79\x64\x75\x6B\x69\x65\x6E\x6B\x65\x74\x74\x68\x75\x63", "\x68\x6F\x74\x65\x6E\x6E\x67\x75\x6F\x69\x71\x75\x61\x6E\x6C\x69", "\x64\x69\x65\x6E\x74\x68\x6F\x61\x69\x71\x75\x61\x6E\x6C\x79", "\x65\x6D\x61\x69\x6C\x6E\x67\x75\x6F\x69\x71\x75\x61\x6E\x6C\x69", "\x63\x68\x75\x63\x76\x75", "\x76\x69\x74\x72\x69\x63\x6F\x6E\x67\x76\x69\x65\x63", "\x6D\x61\x74\x63\x68", "\x20\x2F\x20", "\x6A\x6F\x69\x6E", "\x63\x6F\x6E\x63\x61\x74", "\x3C\x74\x64\x3E", "\x3C\x2F\x74\x64\x3E", "\x6D\x61\x73\x76", "\x66\x6F\x72\x45\x61\x63\x68", "\x67\x65\x74\x4F\x77\x6E\x50\x72\x6F\x70\x65\x72\x74\x79\x4E\x61\x6D\x65\x73", "\x3C\x74\x64\x3E\x3C\x73\x70\x61\x6E\x20\x6F\x6E\x63\x6C\x69\x63\x6B\x3D\x27\x78\x65\x6D\x42\x61\x6F\x43\x61\x6F\x28", "\x29\x27\x20\x63\x6C\x61\x73\x73\x3D\x27\x72\x65\x70\x6F\x72\x74\x5F\x27\x3E\x58\x45\x4D\x20\x42\xC1\x4F\x20\x43\xC1\x4F\x3C\x2F\x73\x70\x61\x6E\x3E\x3C\x2F\x74\x64\x3E", "\x3C\x2F\x74\x72\x3E", "\x4B\x68\xF4\x6E\x67\x20\x74\xEC\x6D\x20\x74\x68\u1EA5\x79\x20\x74\x68\xF4\x6E\x67\x20\x74\x69\x6E", "\x3C\x68\x32\x3E\x53\x4C\x48\x44\x3A\x20", "\x3C\x2F\x68\x32\x3E", "\x64\x6F\x6E\x65", "\x31\x6E\x4F\x32\x6E\x56\x36\x35\x56\x69\x33\x64\x5A\x57\x47\x6C\x61\x49\x4F\x58\x4C\x45\x63\x2D\x5F\x4A\x57\x45\x5A\x4B\x31\x36\x58\x46\x62\x6A\x51\x56\x48\x5F\x33\x51\x30\x55", "\x67\x6F\x6F\x67\x6C\x65\x53\x68\x65\x65\x74\x54\x6F\x4A\x53\x4F\x4E", "\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x69\x73\x61\x5F\x65\x72\x72\x6F\x72\x27\x3E\x20\x3C\x69\x20\x63\x6C\x61\x73\x73\x3D\x27\x66\x61\x20\x66\x61\x2D\x74\x69\x6D\x65\x73\x2D\x63\x69\x72\x63\x6C\x65\x27\x3E\x3C\x2F\x69\x3E\x20\x54\x72\x61\x20\x63\u1EE9\x75\x20\x74\x68\xF4\x6E\x67\x20\x74\x69\x6E\x20\x74\x68\u1EA5\x74\x20\x62\u1EA1\x69\x2E\x20\x3C\x2F\x64\x69\x76\x3E", "\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x69\x73\x61\x5F\x73\x75\x63\x63\x65\x73\x73\x27\x3E\x20\x3C\x69\x20\x63\x6C\x61\x73\x73\x3D\x27\x66\x61\x20\x66\x61\x2D\x63\x68\x65\x63\x6B\x27\x3E\x3C\x2F\x69\x3E\x20\x54\x72\x61\x20\x63\u1EE9\x75\x20\x74\x68\xF4\x6E\x67\x20\x74\x69\x6E\x20\x74\x68\xE0\x6E\x68\x20\x63\xF4\x6E\x67\x20\x3C\x2F\x64\x69\x76\x3E", "\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x74\x65\x6E\x5F\x6D\x73\x73\x76\x5F\x73\x76\x27\x3E", "\x3C\x6C\x61\x62\x65\x6C\x20\x63\x6C\x61\x73\x73\x3D\x27\x6C\x62\x5F\x74\x74\x73\x76\x27\x3E\x54\x68\xF4\x6E\x67\x20\x74\x69\x6E\x20\x73\x69\x6E\x68\x20\x76\x69\xEA\x6E\x20\x3C\x2F\x6C\x61\x62\x65\x6C\x3E\x3C\x2F\x62\x72\x3E", "\x3C\x74\x72\x3E\x3C\x74\x68\x3E\x43\x68\u1EE9\x63\x20\x76\u1EE5\x3C\x2F\x74\x68\x3E\x20\x20\x3C\x74\x68\x3E\x43\xF4\x6E\x67\x20\x74\x79\x3C\x2F\x74\x68\x3E\x20\x20\x3C\x74\x68\x3E\u0110\x69\u1EC7\x6E\x20\x74\x68\x6F\u1EA1\x69\x20\x51\x4C\x3C\x2F\x74\x68\x3E\x20\x3C\x74\x68\x3E\x45\x6D\x61\x69\x6C\x20\x6E\x67\u01B0\u1EDD\x69\x20\x51\x4C\x3C\x2F\x74\x68\x3E\x20\x3C\x74\x68\x3E\x48\u1ECD\x20\x74\xEA\x6E\x20\x71\x75\u1EA3\x6E\x20\x6C\xFD\x3C\x2F\x74\x68\x3E\x20\x3C\x74\x68\x3E\x4E\x67\xE0\x79\x20\x62\u1EAF\x74\x20\u0111\u1EA7\x75\x3C\x2F\x74\x68\x3E\x20\x20\x3C\x74\x68\x3E\x4E\x67\xE0\x79\x20\x64\u1EF1\x20\x6B\x69\u1EBF\x6E\x20\x6B\u1EBF\x74\x20\x74\x68\xFA\x63\x3C\x2F\x74\x68\x3E\x20\x20\x20\x20\x20\x3C\x74\x68\x3E\x56\u1ECB\x20\x74\x72\xED\x20\x63\xF4\x6E\x67\x20\x76\x69\u1EC7\x63\x3C\x2F\x74\x68\x3E\x20\x3C\x74\x68\x3E\x57\x65\x62\x73\x69\x74\x65\x3C\x2F\x74\x68\x3E\x20", "\x3C\x68\x31\x20\x73\x74\x79\x6C\x65\x3D\x27\x66\x6F\x6E\x74\x2D\x73\x69\x7A\x65\x3A\x20\x31\x35\x30\x70\x78\x3B\x20\x74\x65\x78\x74\x2D\x61\x6C\x69\x67\x6E\x3A\x20\x63\x65\x6E\x74\x65\x72\x27\x3E\x4F\x4F\x50\x53\x20\x21\x3C\x2F\x68\x31\x3E\x20\x3C\x68\x32\x20\x63\x6C\x61\x73\x73\x3D\x27\x68\x32\x5F\x65\x72\x72\x6F\x72\x27\x3E\x4C\u1ED7\x69\x21\x20\x74\x72\x61\x6E\x67\x20\x63\u1EE7\x61\x20\x62\u1EA1\x6E\x20\x6B\x68\xF4\x6E\x67\x20\x74\xEC\x6D\x20\x74\x68\u1EA5\x79\x20\x68\x6F\u1EB7\x63\x20\x6D\u1EAD\x74\x20\x6B\x68\u1EA9\x75\x20\u0111\xE3\x20\x74\x68\x61\x79\x20\u0111\u1ED7\x69\x2C\x20\x76\x75\x69\x20\x6C\xF2\x6E\x67\x20\u0111\x69\x20\x74\u1EDB\x69\x20\x74\x72\x61\x6E\x67\x20\x63\x68\u1EE7\x21\x3C\x2F\x68\x32\x3E\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x67\x6F\x5F\x74\x6F\x5F\x68\x6F\x6D\x65\x27\x3E\x3C\x61\x20\x68\x72\x65\x66\x3D\x27\x2F\x27\x3E\x54\x52\x41\x4E\x47\x20\x43\x48\u1EE6\x3C\x2F\x61\x3E\x3C\x2F\x64\x69\x76\x3E", "\x3C\x64\x69\x76\x20\x69\x64\x3D\x27\x62\x61\x6F\x63\x61\x6F\x27\x3E", "\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x62\x6F\x64\x79\x2D\x62\x61\x6F\x63\x61\x6F\x27\x3E", "\x3C\x74\x72\x20\x63\x6C\x61\x73\x73\x3D\x27\x73\x78\x2D\x4E\x44\x43\x54\x59\x27\x3E", "\x68\x6F\x74\x65\x6E", "\x3C\x73\x70\x61\x6E\x20\x63\x6C\x61\x73\x73\x3D\x27\x74\x74\x73\x76\x27\x3E", "\x3C\x62\x3E", "\x3C\x2F\x62\x3E", "\x3C\x2F\x73\x70\x61\x6E\x3E\x20\x3C\x2F\x62\x72\x3E", "\x43\x68\u01B0\x61\x20\x63\u1EAD\x70\x20\x6E\x68\u1EAD\x70", "\x3C\x64\x69\x76\x20\x69\x64\x3D", "\x20\x63\x6C\x61\x73\x73\x3D\x27\x73\x6F\x72\x74\x27\x3E", "\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x62\x6F\x78\x2D\x68\x65\x61\x64\x65\x72\x2D\x72\x65\x70\x6F\x72\x74\x27\x20\x73\x74\x79\x6C\x65\x3D\x27\x68\x65\x69\x67\x68\x74\x3A\x20\x33\x37\x70\x78\x3B\x27\x3E", "\x3C\x73\x74\x72\x6F\x6E\x67\x20\x69\x64\x3D", "\x3E", "\x3C\x2F\x73\x74\x72\x6F\x6E\x67\x3E", "\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x62\x6F\x78\x2D\x6E\x6F\x74\x69\x27\x3E", "\x3C\x62\x75\x74\x74\x6F\x6E\x20\x63\x6C\x61\x73\x73\x3D\x27\x62\x74\x6E\x2D\x76\x69\x65\x77\x2D\x63\x74\x27\x20\x69\x64\x3D", "\x62\x74\x6E\x2D", "\x20\x6F\x6E\x63\x6C\x69\x63\x6B\x3D\x22\x78\x65\x6D\x4E\x6F\x69\x44\x75\x6E\x67\x28\x27", "\x63\x74", "\x27\x29\x3B\x22\x20\x3E\x58\x65\x6D\x20\x6E\u1ED9\x69\x20\x64\x75\x6E\x67\x20\x62\xE1\x6F\x20\x63\xE1\x6F\x3C\x2F\x62\x75\x74\x74\x6F\x6E\x3E\x3C\x73\x70\x61\x6E\x20\x69\x64\x3D", "\x73\x68\x6F\x77\x68\x69\x64\x65\x2D", "\x20\x63\x6C\x61\x73\x73\x3D\x27\x6E\x65\x77\x2D\x6E\x6F\x74\x69\x66\x27\x20\x73\x74\x79\x6C\x65\x3D\x27\x64\x69\x73\x70\x6C\x61\x79\x3A\x6E\x6F\x6E\x65\x3B\x27\x3E\x3C\x2F\x73\x70\x61\x6E\x3E\x3C\x2F\x64\x69\x76\x3E\x3C\x64\x69\x76\x20\x69\x64\x3D", "\x74\x69\x6D\x65\x2D", "\x20\x63\x6C\x61\x73\x73\x3D\x27\x74\x69\x6D\x65\x2D\x62\x61\x6F\x63\x61\x6F\x27\x3E\x3C\x2F\x64\x69\x76\x3E\x3C\x64\x69\x76\x20\x73\x74\x79\x6C\x65\x3D\x27\x63\x6C\x65\x61\x72\x3A\x62\x6F\x74\x68\x3B\x27\x3E\x3C\x2F\x64\x69\x76\x3E\x3C\x2F\x64\x69\x76\x3E", "\x20\x63\x6C\x61\x73\x73\x3D\x27\x76\x69\x65\x77\x2D\x72\x65\x70\x6F\x72\x74\x27\x20\x73\x74\x79\x6C\x65\x3D\x27\x64\x69\x73\x70\x6C\x61\x79\x3A\x6E\x6F\x6E\x65\x3B\x27\x20\x3E", "\x3C\x2F\x64\x69\x76\x3E", "\x61\x6C\x65\x72\x74", "\x3C\x2F\x74\x72\x3E\x3C\x2F\x74\x61\x62\x6C\x65\x3E", "\x3C\x2F\x64\x69\x76\x3E\x3C\x2F\x64\x69\x76\x3E", "\x6C\x61\x72\x67\x65", "\x2E\x70\x6F\x70\x75\x70\x2D\x63\x6F\x6E\x74\x65\x6E\x74", "\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x66\x6F\x72\x6D\x2D\x77\x72\x61\x70\x70\x65\x72\x27\x20\x73\x74\x79\x6C\x65\x3D\x27\x64\x69\x73\x70\x6C\x61\x79\x3A\x6E\x6F\x6E\x65\x3B\x27\x3E\x20\x3C\x6C\x61\x62\x65\x6C\x20\x66\x6F\x72\x3D\x27\x74\x78\x74\x49\x44\x47\x56\x27\x3E\x4D\xE3\x20\x67\x69\u1EA3\x6E\x67\x20\x76\x69\xEA\x6E\x3C\x2F\x6C\x61\x62\x65\x6C\x3E\x20\x3C\x69\x6E\x70\x75\x74\x20\x69\x64\x3D\x27\x69\x64\x67\x76\x5F\x70\x72\x6F\x66\x27\x20\x74\x79\x70\x65\x3D\x27\x74\x65\x78\x74\x27\x20\x6E\x61\x6D\x65\x3D\x27\x74\x78\x74\x49\x44\x47\x56\x27\x20\x63\x6C\x61\x73\x73\x3D\x27\x66\x6F\x72\x6D\x2D\x63\x6F\x6E\x74\x72\x6F\x6C\x27\x20\x72\x65\x61\x64\x6F\x6E\x6C\x79\x20\x76\x61\x6C\x75\x65\x3D", "\x69\x64\x67\x76", "\x3E\x20\x3C\x2F\x64\x69\x76\x3E", "\x3C\x68\x33\x20\x73\x74\x79\x6C\x65\x3D\x27\x74\x65\x78\x74\x2D\x61\x6C\x69\x67\x6E\x3A\x63\x65\x6E\x74\x65\x72\x3B\x43\x4F\x4C\x4F\x52\x3A\x64\x61\x72\x6B\x72\x65\x64\x27\x3E\x54\x48\xD4\x4E\x47\x20\x54\x49\x4E\x20\x47\x49\u1EA2\x4E\x47\x20\x56\x49\xCA\x4E\x3C\x2F\x68\x33\x3E", "\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x66\x6F\x72\x6D\x2D\x77\x72\x61\x70\x70\x65\x72\x27\x3E\x20\x3C\x6C\x61\x62\x65\x6C\x20\x66\x6F\x72\x3D\x27\x74\x78\x74\x47\x56\x45\x6D\x61\x69\x6C\x5F\x50\x72\x6F\x66\x69\x6C\x65\x27\x3E\x45\x6D\x61\x69\x6C\x3C\x2F\x6C\x61\x62\x65\x6C\x3E\x20\x3C\x69\x6E\x70\x75\x74\x20\x74\x79\x70\x65\x3D\x27\x65\x6D\x61\x69\x6C\x27\x20\x6E\x61\x6D\x65\x3D\x27\x74\x78\x74\x47\x56\x45\x6D\x61\x69\x6C\x27\x20\x70\x6C\x61\x63\x65\x68\x6F\x6C\x64\x65\x72\x3D\x27\u0110\u1ECB\x61\x20\x63\x68\u1EC9\x20\x74\x68\u01B0\x20\u0111\x69\u1EC7\x6E\x20\x74\u1EED\x3F\x27\x20\x63\x6C\x61\x73\x73\x3D\x27\x66\x6F\x72\x6D\x2D\x63\x6F\x6E\x74\x72\x6F\x6C\x27\x20\x72\x65\x71\x75\x69\x72\x65\x64\x3D\x27\x27\x20\x6F\x6E\x69\x6E\x76\x61\x6C\x69\x64\x3D\x27\x74\x68\x69\x73\x2E\x73\x65\x74\x43\x75\x73\x74\x6F\x6D\x56\x61\x6C\x69\x64\x69\x74\x79\x28\x29\x27\x20\x6F\x6E\x69\x6E\x70\x75\x74\x3D\x27\x73\x65\x74\x43\x75\x73\x74\x6F\x6D\x56\x61\x6C\x69\x64\x69\x74\x79\x28\x29\x27\x20\x72\x65\x61\x64\x6F\x6E\x6C\x79\x20\x76\x61\x6C\x75\x65\x3D", "\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x66\x6F\x72\x6D\x2D\x77\x72\x61\x70\x70\x65\x72\x27\x20\x3E\x20\x3C\x6C\x61\x62\x65\x6C\x20\x66\x6F\x72\x3D\x27\x74\x78\x74\x47\x56\x45\x6D\x61\x69\x6C\x5F\x50\x72\x6F\x66\x69\x6C\x65\x27\x3E\x53\u1ED1\x20\u0111\x69\u1EC7\x6E\x20\x74\x68\x6F\u1EA1\x69\x3C\x2F\x6C\x61\x62\x65\x6C\x3E\x20\x3C\x69\x6E\x70\x75\x74\x20\x74\x79\x70\x65\x3D\x27\x74\x65\x78\x74\x27\x20\x6E\x61\x6D\x65\x3D\x27\x74\x78\x74\x47\x56\x45\x6D\x61\x69\x6C\x5F\x50\x72\x6F\x66\x69\x6C\x65\x27\x20\x70\x6C\x61\x63\x65\x68\x6F\x6C\x64\x65\x72\x3D\x27\x53\u1ED1\x20\u0111\x69\u1EC7\x6E\x20\x74\x68\x6F\u1EA1\x69\x20\x67\x69\u1EA3\x6E\x67\x20\x76\x69\xEA\x6E\x27\x20\x63\x6C\x61\x73\x73\x3D\x27\x66\x6F\x72\x6D\x2D\x63\x6F\x6E\x74\x72\x6F\x6C\x27\x20\x72\x65\x71\x75\x69\x72\x65\x64\x3D\x27\x27\x20\x6F\x6E\x69\x6E\x76\x61\x6C\x69\x64\x3D\x27\x74\x68\x69\x73\x2E\x73\x65\x74\x43\x75\x73\x74\x6F\x6D\x56\x61\x6C\x69\x64\x69\x74\x79\x28\x29\x27\x20\x6F\x6E\x69\x6E\x70\x75\x74\x3D\x27\x73\x65\x74\x43\x75\x73\x74\x6F\x6D\x56\x61\x6C\x69\x64\x69\x74\x79\x28\x29\x27\x20\x72\x65\x61\x64\x6F\x6E\x6C\x79\x20\x76\x61\x6C\x75\x65\x3D", "\x3C\x66\x6F\x72\x6D\x20\x69\x64\x3D\x27\x75\x70\x64\x61\x74\x65\x5F\x66\x6F\x72\x6D\x5F\x67\x76\x27\x20\x6F\x6E\x73\x75\x62\x6D\x69\x74\x3D\x27\x75\x70\x64\x61\x74\x65\x5F\x70\x61\x73\x73\x5F\x76\x61\x6C\x75\x65\x28\x29\x3B\x20\x72\x65\x74\x75\x72\x6E\x20\x66\x61\x6C\x73\x65\x3B\x27\x20\x3E", "\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x66\x6F\x72\x6D\x2D\x77\x72\x61\x70\x70\x65\x72\x27\x3E\x20\x3C\x6C\x61\x62\x65\x6C\x20\x66\x6F\x72\x3D\x27\x74\x78\x74\x47\x56\x45\x6D\x61\x69\x6C\x5F\x50\x72\x6F\x66\x69\x6C\x65\x27\x3E\x4D\u1EAD\x74\x20\x6B\x68\u1EA9\x75\x3C\x2F\x6C\x61\x62\x65\x6C\x3E\x20\x3C\x69\x6E\x70\x75\x74\x20\x69\x64\x3D\x27\x68\x61\x73\x68\x5F\x69\x6E\x70\x75\x74\x5F\x70\x63\x68\x61\x6E\x67\x65\x27\x20\x74\x79\x70\x65\x3D\x27\x70\x61\x73\x73\x77\x6F\x72\x64\x27\x20\x70\x6C\x61\x63\x65\x68\x6F\x6C\x64\x65\x72\x3D\x27\x4D\u1EAD\x74\x20\x6B\x68\u1EA9\x75\x20\x6D\u1EDB\x69\x3F\x27\x20\x63\x6C\x61\x73\x73\x3D\x27\x66\x6F\x72\x6D\x2D\x63\x6F\x6E\x74\x72\x6F\x6C\x27\x20\x6F\x6E\x6B\x65\x79\x70\x72\x65\x73\x73\x3D\x27\x72\x65\x74\x75\x72\x6E\x20\x42\x6C\x6F\x63\x6B\x53\x70\x61\x63\x65\x28\x29\x27\x20\x72\x65\x71\x75\x69\x72\x65\x64\x3D\x27\x27\x20\x20\x3E\x3C\x69\x6E\x70\x75\x74\x20\x74\x79\x70\x65\x3D\x27\x70\x61\x73\x73\x77\x6F\x72\x64\x27\x20\x69\x64\x3D\x27\x68\x61\x73\x68\x5F\x6F\x75\x74\x70\x75\x74\x5F\x70\x63\x68\x61\x6E\x67\x65\x27\x20\x68\x69\x64\x64\x65\x6E\x20\x72\x65\x61\x64\x6F\x6E\x6C\x79\x20\x66\x6F\x63\x75\x73\x3D\x27\x64\x69\x73\x61\x62\x6C\x65\x64\x27\x20\x73\x74\x79\x6C\x65\x3D\x27\x63\x75\x72\x73\x6F\x72\x3A\x6E\x6F\x74\x2D\x61\x6C\x6C\x6F\x77\x65\x64\x3B\x27\x3E\x20\x3C\x2F\x64\x69\x76\x3E", "\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x66\x6F\x72\x6D\x2D\x77\x72\x61\x70\x70\x65\x72\x27\x3E\x20\x3C\x6C\x61\x62\x65\x6C\x20\x66\x6F\x72\x3D\x27\x74\x78\x74\x47\x56\x45\x6D\x61\x69\x6C\x5F\x50\x72\x6F\x66\x69\x6C\x65\x27\x3E\x4E\x68\u1EAD\x70\x20\x6C\u1EA1\x69\x20\x6D\u1EAD\x74\x20\x6B\x68\u1EA9\x75\x3C\x2F\x6C\x61\x62\x65\x6C\x3E\x20\x3C\x69\x6E\x70\x75\x74\x20\x69\x64\x3D\x27\x70\x61\x73\x73\x67\x76\x5F\x70\x72\x6F\x66\x5F\x72\x65\x70\x65\x61\x74\x27\x20\x74\x79\x70\x65\x3D\x27\x70\x61\x73\x73\x77\x6F\x72\x64\x27\x20\x70\x6C\x61\x63\x65\x68\x6F\x6C\x64\x65\x72\x3D\x27\x4E\x68\u1EAD\x70\x20\x6C\u1EA1\x69\x20\x6D\u1EAD\x74\x20\x6B\x68\u1EA9\x75\x3F\x27\x20\x63\x6C\x61\x73\x73\x3D\x27\x66\x6F\x72\x6D\x2D\x63\x6F\x6E\x74\x72\x6F\x6C\x27\x20\x6F\x6E\x6B\x65\x79\x70\x72\x65\x73\x73\x3D\x27\x72\x65\x74\x75\x72\x6E\x20\x42\x6C\x6F\x63\x6B\x53\x70\x61\x63\x65\x28\x29\x27\x20\x72\x65\x71\x75\x69\x72\x65\x64\x3D\x27\x27\x20\x3E\x20\x3C\x2F\x64\x69\x76\x3E", "\x3C\x73\x70\x61\x6E\x20\x63\x6C\x61\x73\x73\x3D\x27\x66\x6C\x69\x74\x2D\x6C\x65\x66\x74\x27\x3E\x20\x3C\x69\x6E\x70\x75\x74\x20\x74\x79\x70\x65\x3D\x27\x63\x68\x65\x63\x6B\x62\x6F\x78\x27\x20\x6F\x6E\x63\x6C\x69\x63\x6B\x3D\x27\x73\x68\x6F\x77\x68\x69\x64\x65\x70\x61\x73\x73\x28\x29\x27\x3E\x20\x3C\x62\x3E\x48\x69\u1EC5\x6E\x20\x74\x68\u1ECB\x20\x6D\u1EAD\x74\x20\x6B\x68\u1EA9\x75\x3C\x2F\x62\x3E\x20\x3C\x2F\x73\x70\x61\x6E\x3E", "\x3C\x69\x6E\x70\x75\x74\x20\x74\x79\x70\x65\x3D\x27\x73\x75\x62\x6D\x69\x74\x27\x20\x63\x6C\x61\x73\x73\x3D\x27\x66\x6F\x72\x6D\x2D\x63\x6F\x6E\x74\x72\x6F\x6C\x20\x66\x6C\x69\x74\x2D\x72\x69\x67\x68\x74\x27\x20\x76\x61\x6C\x75\x65\x3D\x27\x43\u1EAD\x70\x20\x6E\x68\u1EAD\x74\x27\x3E", "\x3C\x2F\x66\x6F\x72\x6D\x3E\x3C\x70\x20\x69\x64\x3D\x27\x72\x65\x27\x3E\x3C\x2F\x70\x3E", "\x3C\x73\x63\x72\x69\x70\x74\x20\x74\x79\x70\x65\x3D\x27\x74\x65\x78\x74\x2F\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74\x27\x20\x73\x72\x63\x3D\x27\x2E\x2F\x64\x6F\x5F\x63\x75\x73\x74\x6F\x6D\x5F\x69\x6E\x66\x6F\x2E\x6A\x73\x27\x3E\x3C\x2F\x73\x63\x72\x69\x70\x74\x3E", "\x3C\x68\x31\x20\x63\x6C\x61\x73\x73\x3D\x27\x68\x31\x5F\x65\x72\x72\x6F\x72\x27\x3E\x4F\x4F\x50\x53\x20\x21\x3C\x2F\x68\x31\x3E\x20\x3C\x68\x32\x20\x63\x6C\x61\x73\x73\x3D\x27\x68\x32\x5F\x65\x72\x72\x6F\x72\x27\x3E\x4C\u1ED7\x69\x21\x20\x74\x72\x61\x6E\x67\x20\x63\u1EE7\x61\x20\x62\u1EA1\x6E\x20\x6B\x68\xF4\x6E\x67\x20\x74\xEC\x6D\x20\x74\x68\u1EA5\x79\x20\x68\x6F\u1EB7\x63\x20\x6D\u1EAD\x74\x20\x6B\x68\u1EA9\x75\x20\u0111\xE3\x20\x74\x68\x61\x79\x20\u0111\u1ED7\x69\x2C\x20\x76\x75\x69\x20\x6C\xF2\x6E\x67\x20\u0111\x69\x20\x74\u1EDB\x69\x20\x74\x72\x61\x6E\x67\x20\x63\x68\u1EE7\x21\x3C\x2F\x68\x32\x3E\x20\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x27\x67\x6F\x5F\x74\x6F\x5F\x68\x6F\x6D\x65\x27\x3E\x3C\x61\x20\x68\x72\x65\x66\x3D\x27\x2F\x27\x3E\x54\x52\x41\x4E\x47\x20\x43\x48\u1EE6\x3C\x2F\x61\x3E\x3C\x2F\x64\x69\x76\x3E", "\x74\x75\x61\x6E\x2D\x6D\x6F\x74", "\x74\x75\x61\x6E\x2D\x68\x61\x69", "\x74\x75\x61\x6E\x2D\x62\x61", "\x74\x75\x61\x6E\x2D\x62\x6F\x6E", "\x74\x75\x61\x6E\x2D\x6E\x61\x6D", "\x74\x75\x61\x6E\x2D\x73\x61\x75", "\x74\x75\x61\x6E\x2D\x62\x61\x79", "\x74\x75\x61\x6E\x2D\x74\x61\x6D", "\x74\x75\x61\x6E\x2D\x63\x68\x69\x6E", "\x74\x75\x61\x6E\x2D\x6D\x75\x6F\x69", "\x74\x75\x61\x6E\x2D\x6D\x75\x6F\x69\x2D\x6D\x6F\x74", "\x74\x75\x61\x6E\x2D\x6D\x75\x6F\x69\x2D\x68\x61\x69", "\x74\x69\x6D\x65\x2D\x74\x75\x61\x6E\x2D\x6D\x6F\x74", "\x74\x69\x6D\x65\x2D\x74\x75\x61\x6E\x2D\x68\x61\x69", "\x74\x69\x6D\x65\x2D\x74\x75\x61\x6E\x2D\x62\x61", "\x74\x69\x6D\x65\x2D\x74\x75\x61\x6E\x2D\x62\x6F\x6E", "\x74\x69\x6D\x65\x2D\x74\x75\x61\x6E\x2D\x6E\x61\x6D", "\x74\x69\x6D\x65\x2D\x74\x75\x61\x6E\x2D\x73\x61\x75", "\x74\x69\x6D\x65\x2D\x74\x75\x61\x6E\x2D\x62\x61\x79", "\x74\x69\x6D\x65\x2D\x74\x75\x61\x6E\x2D\x74\x61\x6D", "\x74\x69\x6D\x65\x2D\x74\x75\x61\x6E\x2D\x63\x68\x69\x6E", "\x74\x69\x6D\x65\x2D\x74\x75\x61\x6E\x2D\x6D\x75\x6F\x69", "\x74\x69\x6D\x65\x2D\x74\x75\x61\x6E\x2D\x6D\x75\x6F\x69\x2D\x6D\x6F\x74", "\x74\x69\x6D\x65\x2D\x74\x75\x61\x6E\x2D\x6D\x75\x6F\x69\x2D\x68\x61\x69", "\x69\x64", "\x73\x65\x74\x41\x74\x74\x72\x69\x62\x75\x74\x65", "\x23\x62\x61\x6F\x63\x61\x6F", "\x61\x70\x70\x65\x6E\x64\x54\x6F", "\x65\x61\x63\x68", "\x73\x6F\x72\x74", "\x23\x62\x61\x6F\x63\x61\x6F\x20\x2E\x73\x6F\x72\x74", "\x54\x75\u1EA7\x6E\x20\x31\x3A", "\x54\x75\u1EA7\x6E\x20\x32\x3A", "\x54\x75\u1EA7\x6E\x20\x33\x3A", "\x54\x75\u1EA7\x6E\x20\x34\x3A", "\x54\x75\u1EA7\x6E\x20\x35\x3A", "\x54\x75\u1EA7\x6E\x20\x36\x3A", "\x54\x75\u1EA7\x6E\x20\x37\x3A", "\x54\x75\u1EA7\x6E\x20\x38\x3A", "\x54\x75\u1EA7\x6E\x20\x39\x3A", "\x54\x75\u1EA7\x6E\x20\x31\x30\x3A", "\x54\x75\u1EA7\x6E\x20\x31\x31\x3A", "\x54\x75\u1EA7\x6E\x20\x31\x32\x3A", "\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C", "\x23\x74\x68\x6F\x6E\x67\x74\x69\x6E\x5F\x74\x75\x61\x6E", "\x53\x68\x65\x65\x74\x33", "\x33", "\x73\x6F\x74\x75\x61\x6E\x74\x68\x75\x63\x68\x69\x65\x6E", "\x4C\u1ED7\x69", "\x2F", "\x73\x70\x6C\x69\x74", "\x67\x65\x74\x44\x61\x74\x65", "\x73\x65\x74\x44\x61\x74\x65", "\x54\u1EEB\x20", "\x76\x69\x2D\x56\x4E", "\x74\x6F\x4C\x6F\x63\x61\x6C\x65\x44\x61\x74\x65\x53\x74\x72\x69\x6E\x67", "\x70\x75\x73\x68", "\x20\u0111\u1EBF\x6E\x20", "\x64\x69\x73\x70\x6C\x61\x79", "\x73\x74\x79\x6C\x65", "\x6E\x6F\x6E\x65", "\x63\x74\x74\x75\x61\x6E\x2D\x6D\x6F\x74", "\x63\x74\x74\x75\x61\x6E\x2D\x68\x61\x69", "\x63\x74\x74\x75\x61\x6E\x2D\x62\x61", "\x63\x74\x74\x75\x61\x6E\x2D\x62\x6F\x6E", "\x63\x74\x74\x75\x61\x6E\x2D\x6E\x61\x6D", "\x63\x74\x74\x75\x61\x6E\x2D\x73\x61\x75", "\x63\x74\x74\x75\x61\x6E\x2D\x62\x61\x79", "\x63\x74\x74\x75\x61\x6E\x2D\x74\x61\x6D", "\x63\x74\x74\x75\x61\x6E\x2D\x63\x68\x69\x6E", "\x63\x74\x74\x75\x61\x6E\x2D\x6D\x75\x6F\x69", "\x63\x74\x74\x75\x61\x6E\x2D\x6D\x75\x6F\x69\x2D\x6D\x6F\x74", "\x63\x74\x74\x75\x61\x6E\x2D\x6D\x75\x6F\x69\x2D\x68\x61\x69", "\x2D\x2D\x2D", "\u0110\xE3\x20\x6E\u1ED9\x70"];
+var input = document[_0xab8f[1]](_0xab8f[0]);
+input[_0xab8f[7]](_0xab8f[2], function(_0x3a38x2) {
+  if (_0x3a38x2[_0xab8f[3]] === 13) {
+    _0x3a38x2[_0xab8f[4]]();
+    document[_0xab8f[1]](_0xab8f[6])[_0xab8f[5]]()
+  }
 });
 
 function stepGetGiangVien() {
-    doLoading()
-        .then(doGetGiangVien)
-        .then(doComplete);
+  doLoading()[_0xab8f[8]](doGetGiangVien)[_0xab8f[8]](doComplete)
 }
 
 function stepGetSinhVien() {
-    doLoading()
-        .then(doGetSinhVien)
-        .then(doComplete)
-        .then(doShowUpdate);
+  doLoading()[_0xab8f[8]](doGetSinhVien)[_0xab8f[8]](doComplete)[_0xab8f[8]](doShowUpdate)
 }
 
-
 function doLoading() {
-    return new Promise(function (resolve, reject) {
-        document.querySelector('.js-loading').classList.remove('is-hidden');
-        resolve();
-    });
+  return new Promise(function(_0x3a38x6, _0x3a38x7) {
+    document[_0xab8f[13]](_0xab8f[12])[_0xab8f[11]][_0xab8f[10]](_0xab8f[9]);
+    _0x3a38x6()
+  })
 }
 
 function doGetGiangVien() {
-    return new Promise(function (resolve, reject) {
-        giangVienGet();
-        resolve();
-    });
+  return new Promise(function(_0x3a38x6, _0x3a38x7) {
+    giangVienGet();
+    _0x3a38x6()
+  })
 }
 
 function doComplete() {
-    return new Promise(function (resolve, reject) {
-        setTimeout(() => {
-            document.querySelector('.js-loading').classList.add('is-hidden');
-        }, 1000);
-        resolve();
-    });
+  return new Promise(function(_0x3a38x6, _0x3a38x7) {
+    setTimeout(() => {
+      document[_0xab8f[13]](_0xab8f[12])[_0xab8f[11]][_0xab8f[14]](_0xab8f[9])
+    }, 1000);
+    _0x3a38x6()
+  })
 }
 
 function giangVienGet() {
+  var _0x3a38xb = $[_0xab8f[19]]($(_0xab8f[18])[_0xab8f[17]]())[_0xab8f[16]](/ /g, _0xab8f[15]);
+  var _0x3a38xc = $[_0xab8f[19]]($(_0xab8f[20])[_0xab8f[17]]())[_0xab8f[16]](/ /g, _0xab8f[15]);
+  var _0x3a38xd = $[_0xab8f[19]]($(_0xab8f[21])[_0xab8f[17]]())[_0xab8f[16]](/ /g, _0xab8f[15]);
+  var _0x3a38xe = _0x3a38xc[_0xab8f[23]](1, _0x3a38xc[_0xab8f[22]]);
+  if (_0x3a38xb == _0xab8f[15] || _0x3a38xc == _0xab8f[15]) {
+    alert(_0xab8f[24]);
+    return false
+  };
+  $(_0xab8f[26])[_0xab8f[25]](_0xab8f[15]);
+  $(_0xab8f[27])[_0xab8f[25]](_0xab8f[15]);
+  $(_0xab8f[28])[_0xab8f[25]](_0xab8f[15]);
+  $[_0xab8f[81]](_0xab8f[80], 6)[_0xab8f[79]](function(_0x3a38x10) {
+    var _0x3a38x11 = 0;
+    _0x3a38x10[_0xab8f[71]](function(_0x3a38x12) {
+      eval(function(p, a, c, k, e, d) {
+        e = function(c) {
+          return c
+        };
+        if (!''.replace(/^/, String)) {
+          while (c--) {
+            d[c] = k[c] || c
+          }
+          k = [function(e) {
+            return d[e]
+          }];
+          e = function() {
+            return '\\w+'
+          };
+          c = 1
+        };
+        while (c--) {
+          if (k[c]) {
+            p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+          }
+        }
+        return p
+      }('1 4=0[2[3]];1 5=0[2[6]];1 7=0[2[8]];', 9, 9, '_0x3a38x12|var|_0xab8f|30|_0x3a38x13|_0x3a38x14|31|_0x3a38x15|32'.split('|'), 0, {}))
 
-    var email = $.trim($("input[name='txtGVEmail']").val()).replace(/ /g, '');
-    var sdt = $.trim($("input[name='txtGVSDT']").val()).replace(/ /g, '');
-    var pass = $.trim($("input[name='txtPass']").val()).replace(/ /g, '');
-
-    var sdt1 = sdt.substring(1, sdt.length);
-
-    if (email == '' || sdt == '') {
-        alert("VUI LÒNG NHẬP ĐỦ THÔNG TIN EMAIL VÀ SỐ ĐIỆN THOẠI");
-        return false;
-    }
-    $("#profile_gv").html("");
-    $("#InfoGV").html("");
-    $("#countHDGV").html("");
-
-        $.googleSheetToJSON('1nO2nV65Vi3dZWGlaIOXLEc-_JWEZK16XFbjQVH_3Q0U', 6)
-            .done(function (rows) {
-                var count = 0;
-                rows.forEach(function (row) {
-                    var strEmail = row['gvemail'];
-                    var strDT = row['gvdienthoai'];
-                    var strPass = row['password'];
-
-                    if (strPass == pass && strEmail == email && (strDT == sdt || strDT == sdt1)) {
-                        count++;
-                        $.googleSheetToJSON('1nO2nV65Vi3dZWGlaIOXLEc-_JWEZK16XFbjQVH_3Q0U', 1)
-                            .done(function (rows) {
-
-                                var strTool = "<div id='popup-wrap-box'> <div class='popup-wrap'> <div class='popup-box'> <div class='popup-content'> </div> <a class='close-btn popup-close' href='#'>x</a> </div> </div> </div>";
-
-                                strTool += "<div class='box-user-thongbao'> <a class='btn popup-btn slide-right' href='#' onclick='profileGet();'>Trang cá nhân </a> <marquee class='marquee-slide-right'>Thông báo: Yêu cầu giảng viên đỗi mật khẩu tra cứu thông tin</marquee> </div>";
-
-
-                                $(document).ready(function() {
-                                    $('.popup-btn').click(function(e) {
-                                      $('.popup-wrap').fadeIn(500);
-                                      $('.popup-box').removeClass('transform-out').addClass('transform-in');
-
-                                      e.preventDefault();
-                                    });
-
-                                    $('.popup-close').click(function(e) {
-                                      $('.popup-wrap').fadeOut(500);
-                                      $('.popup-box').removeClass('transform-in').addClass('transform-out');
-
-                                      e.preventDefault();
-                                    });
-                                  });
-                                var strText = "<table class='dtable'>";
-                                strText += "<tr><th>Tên SV</th>  <th>Lớp</th>  <th>Mã SV</th>  <th>Ngành</th>  <th>Ngày sinh</th>   <th>Email SV</th>  <th>SĐT SV</th>  <th>Môn</th><th>Xem Báo Cáo</th> ";
-                                var count = 0;
-                                var newMaSV;
-                                rows.forEach(function (row) {
-                                    var strEmail = row['gvemail'];
-                                    var strDT = row['gvdienthoai'];
-                                    if (strEmail == email && (strDT == sdt || strDT == sdt1)) {
-                                        count++;
-                                        strText += "<tr>";
-
-                                        Object.getOwnPropertyNames(row).forEach(function (name) {
-
-                                            if (name == 'sotc' || name == 'tt' || name == 'gvhoten' || name == 'gvemail' || name == 'gvdienthoai' || name == 'mand' || name == 'nhom' || name == 'mamh' || name === 'congty' || name === 'website' || name === 'ngaybatdau' || name === 'ngaydukienketthuc' || name === 'hotennguoiquanli' || name === 'dienthoaiquanly' || name === 'emailnguoiquanli' || name === 'chucvu' || name === 'vitricongviec' || name.match(/tuan.*/))
-                                                return;
-                                            var val = [].concat(row[name]).join(' / ');
-                                            strText += "<td>" + val + "</td>";
-                                            if (name == "masv")
-                                                newMaSV = row[name];
-
-
-
-                                        });
-                                        strText += "<td><span onclick='xemBaoCao(" + newMaSV + ")' class='report_'>XEM BÁO CÁO</span></td>";
-                                        strText += "</tr>";
-                                    }
-                                });
-                                if (count == 0)
-                                    $("#InfoGV").html('Không tìm thấy thông tin');
-                                else {
-                                    $("#profile_gv").html(strTool);
-                                    $("#InfoGV").html(strText);
-                                    $("#countHDGV").html("<h2>SLHD: " + count + "</h2>");
-                                }
-                            })
-                            .fail(function (err) {
-                                // console.log('error!', err);
-                                // alert("LỖI DO MÁY CHỦ GOOGLE SHEET");
-                            });
-
-
-                    }
-                });
-                var strBoxError = "<div class='isa_error'> <i class='fa fa-times-circle'></i> Tra cứu thông tin thất bại. </div>";
-                var strBoxSucess = "<div class='isa_success'> <i class='fa fa-check'></i> Tra cứu thông tin thành công </div>";
-                if (count == 0)
-                    $("#InfoGV").html(strBoxError);
-                else {
-                    $("#InfoGV").html(strBoxSucess);
-
-                //   THONG BAO LOI TU HE THONG
-                }
-            })
-            .fail(function (err) {
-                // console.log('error!', err);
-                // alert("LỖI DO MÁY CHỦ GOOGLE SHEET");
+      if (eval(function(p, a, c, k, e, d) {
+          e = function(c) {
+            return c
+          };
+          if (!''.replace(/^/, String)) {
+            while (c--) {
+              d[c] = k[c] || c
+            }
+            k = [function(e) {
+              return d[e]
+            }];
+            e = function() {
+              return '\\w+'
+            };
+            c = 1
+          };
+          while (c--) {
+            if (k[c]) {
+              p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+            }
+          }
+          return p
+        }('2==1&&3==4&&(0==5||0==6)', 7, 7, '_0x3a38x14|_0x3a38xd|_0x3a38x15|_0x3a38x13|_0x3a38xb|_0x3a38xc|_0x3a38xe'.split('|'), 0, {}))) {
+        _0x3a38x11++;
+        $[_0xab8f[81]](_0xab8f[80], 1)[_0xab8f[79]](function(_0x3a38x10) {
+          var _0x3a38x16 = _0xab8f[33];
+          _0x3a38x16 += _0xab8f[34];
+          $(document)[_0xab8f[45]](function() {
+            $(_0xab8f[42])[_0xab8f[5]](function(_0x3a38x17) {
+              $(_0xab8f[36])[_0xab8f[35]](500);
+              $(_0xab8f[41])[_0xab8f[40]](_0xab8f[39])[_0xab8f[38]](_0xab8f[37]);
+              _0x3a38x17[_0xab8f[4]]()
             });
-}
-
-function xemBaoCao(masv) {
-    var worksheets = [
-        '',
-        'ouab0ad'
-    ];
-    strTextThongTinSV = "<div class='ten_mssv_sv'>" ;
-    strTextThongTinSV += "<label class='lb_ttsv'>Thông tin sinh viên </label></br>";
-
-    strTextCongTy = "<table class='dtable'>";
-    strTextCongTy += "<tr><th>Chức vụ</th>  <th>Công ty</th>  <th>Điện thoại QL</th> <th>Email người QL</th> <th>Họ tên quản lý</th> <th>Ngày bắt đầu</th>  <th>Ngày dự kiến kết thúc</th>     <th>Vị trí công việc</th> <th>Website</th> ";
-
-    strTextBaoCao = "<div id='baocao'>";
-    strTextBaoCao += "<div class='body-baocao'>";
-    strTextCongTy += "<tr class='sx-NDCTY'>";
-    document.querySelector('.js-loading').classList.remove('is-hidden');
-    worksheets.forEach(function (worksheet) {
-        $.googleSheetToJSON('1nO2nV65Vi3dZWGlaIOXLEc-_JWEZK16XFbjQVH_3Q0U', worksheet)
-        .done(function (rows) {
-                rows.forEach(function (row) {
-                    if (row["masv"] == masv) {
-                        Object.getOwnPropertyNames(row).forEach(function (name) {
-                            if(name === 'masv' ||  name === 'hoten')
-                            {
-                                //build div show info
-                                var val = [].concat(row[name]).join(' / ');
-                                strTextThongTinSV += "<span class='ttsv'>" + "<b>" + val + "</b>" + "</span> </br>";
-                            }
-
-                            if (name === 'congty' || name === 'website' || name === 'ngaybatdau' || name === 'ngaydukienketthuc' || name === 'hotennguoiquanli' || name === 'dienthoaiquanly' || name === 'chucvu' || name === 'emailnguoiquanli' || name === 'vitricongviec')
-                            {
-                                //buid table 1
-                                var val = [].concat(row[name]).join(' / ');
-                                if(val == '' || val.length < 1)
-                                    strTextCongTy += "<td>" + "Chưa cập nhập" + "</td>";
-                                strTextCongTy += "<td>" + val + "</td>";
-                            }
-
-                            else
-                            {
-                                if (name.match(/tuan.*/)) {
-
-                                    //buid table 2
-                                    var val = [].concat(row[name]).join(' / ');
-                                    strTextBaoCao += "<div id="+name+" class='sort'>" + "<div class='box-header-report' style='height: 37px;'>" + "<strong id="+name+">" + name + "</strong>";
-                                    strTextBaoCao += "<div class='box-noti'>";
-                                    strTextBaoCao += "<button class='btn-view-ct' id="+"btn-"+name+" onclick=\"xemNoiDung(\'" +"ct"+name+"\');\" >Xem nội dung báo cáo</button><span id=" +"showhide-"+"ct"+name+ " class='new-notif' style='display:none;'></span></div><div id="+"time-"+name+" class='time-baocao'></div><div style='clear:both;'></div></div>"
-                                    strTextBaoCao += "<div id="+"ct"+name+" class='view-report' style='display:none;' >"  + val + "</div>";
-
-
-                                }
-                            }
-                        });
-
-
-                    }
-                    return;
-                });
-                document.querySelector('.js-loading').classList.add('is-hidden');
-                strTextThongTinSV += "</div>";
-                strTextCongTy += "</tr></table>";
-                strTextBaoCao += "</div></div>";
-                bootbox.alert({
-                    message: strTextThongTinSV + strTextCongTy  + strTextBaoCao,
-                    size: 'large'
-                });
-
-                addClassnameTUAN();
-                getTime();
+            $(_0xab8f[44])[_0xab8f[5]](function(_0x3a38x17) {
+              $(_0xab8f[36])[_0xab8f[43]](500);
+              $(_0xab8f[41])[_0xab8f[40]](_0xab8f[37])[_0xab8f[38]](_0xab8f[39]);
+              _0x3a38x17[_0xab8f[4]]()
             })
-            .fail(function (err) {
-                //
-            });
-
-    });
-
-
-}
-
-
-// Build profile user
-function profileGet(){
-  var email = $.trim($("input[name='txtGVEmail']").val()).replace(/ /g, '');
-  var sdt = $.trim($("input[name='txtGVSDT']").val()).replace(/ /g, '');
-  var pass = $.trim($("input[name='txtPass']").val()).replace(/ /g, '');
-  var sdt1 = sdt.substring(1, sdt.length);
-
-   var strTextProfile = "";
-
-
-  $(".popup-content").html("");
-      $.googleSheetToJSON('1nO2nV65Vi3dZWGlaIOXLEc-_JWEZK16XFbjQVH_3Q0U', 6)
-          .done(function (rows) {
-              var count = 0;
-              rows.forEach(function (row) {
-                var strEmail = row['gvemail'];
-                var strDT = row['gvdienthoai'];
-                var strPass = row['password'];
-
-                if (strPass == pass)
-                if (strPass == pass && strEmail == email && (strDT == sdt || strDT == sdt1)) {
-                      count++;
-
-                        //$("input[name=txtGVEmail_Profile]").val(row['gvemail']);
-                        // var val = row['gvemail'];
-                        strTextProfile += "<div class='form-wrapper' style='display:none;'> <label for='txtIDGV'>Mã giảng viên</label> <input id='idgv_prof' type='text' name='txtIDGV' class='form-control' readonly value="+row['idgv']+"> </div>";
-
-                        strTextProfile += "<h3 style='text-align:center;COLOR:darkred'>THÔNG TIN GIẢNG VIÊN</h3>";
-                        strTextProfile += "<div class='form-wrapper'> <label for='txtGVEmail_Profile'>Email</label> <input type='email' name='txtGVEmail' placeholder='Địa chỉ thư điện tử?' class='form-control' required='' oninvalid='this.setCustomValidity()' oninput='setCustomValidity()' readonly value="+row['gvemail']+"> </div>";
-
-                        //  $("input[name=txtGVSDT]").val(row[name]);
-                          strTextProfile += "<div class='form-wrapper' > <label for='txtGVEmail_Profile'>Số điện thoại</label> <input type='text' name='txtGVEmail_Profile' placeholder='Số điện thoại giảng viên' class='form-control' required='' oninvalid='this.setCustomValidity()' oninput='setCustomValidity()' readonly value="+row['gvdienthoai']+"> </div>";
-
-                          strTextProfile += "<form id='update_form_gv' onsubmit='update_pass_value(); return false;' >";
-                          strTextProfile += "<div class='form-wrapper'> <label for='txtGVEmail_Profile'>Mật khẩu</label> <input id='passgv_prof' type='password' placeholder='Mật khẩu mới?' class='form-control' onkeypress='return BlockSpace()' required=''  > </div>";
-                          strTextProfile += "<div class='form-wrapper'> <label for='txtGVEmail_Profile'>Nhập lại mật khẩu</label> <input id='passgv_prof_repeat' type='password' placeholder='Nhập lại mật khẩu?' class='form-control' onkeypress='return BlockSpace()' required='' > </div>";
-
-                          strTextProfile += "<span class='flit-left'> <input type='checkbox' onclick='showhidepass()'> <b>Hiễn thị mật khẩu</b> </span>";
-
-                          strTextProfile += "<input type='submit' class='form-control flit-right' value='Cập nhật'>";
-                          strTextProfile += "</form><p id='re'></p>";
-
-                          //
-                          // strTextProfile += "<a onclick='update_pass_value();' class='form-control update_infoGV'>Cập nhật</a><p id='re'></p>";
-
-
-                    }
-                  })
-
-
-                  if (count == 0) {
-                      $(".popup-content").html("<p style='text-align:center; font-size: 16px;'>Không tìm thấy thông tin hoặc bạn đã thay đỗi mật khẩu - xin vui lòng refresh trang và đăng nhập lại hoặc click <a href='/'>TRANG CHỦ </a> </p>");
-                  } else {
-                      // strTextProfile += "</form>";
-                      $(".popup-content").html(strTextProfile);
-                  }
-              })
-
-
-          .fail(function (err) {
-              //
           });
+          var _0x3a38x18 = _0xab8f[46];
+          _0x3a38x18 += _0xab8f[47];
+          var _0x3a38x11 = 0;
+          var _0x3a38x19;
+          _0x3a38x10[_0xab8f[71]](function(_0x3a38x12) {
+            var _0x3a38x13 = _0x3a38x12[_0xab8f[30]];
+            var _0x3a38x14 = _0x3a38x12[_0xab8f[31]];
+            if (_0x3a38x15 == _0x3a38xd && _0x3a38x13 == _0x3a38xb && (_0x3a38x14 == _0x3a38xc || _0x3a38x14 == _0x3a38xe)) {
+              _0x3a38x11++;
+              _0x3a38x18 += _0xab8f[48];
+              Object[_0xab8f[72]](_0x3a38x12)[_0xab8f[71]](function(_0x3a38x1a) {
+                if (_0x3a38x1a == _0xab8f[49] || _0x3a38x1a == _0xab8f[50] || _0x3a38x1a == _0xab8f[51] || _0x3a38x1a == _0xab8f[30] || _0x3a38x1a == _0xab8f[31] || _0x3a38x1a == _0xab8f[52] || _0x3a38x1a == _0xab8f[53] || _0x3a38x1a == _0xab8f[54] || _0x3a38x1a === _0xab8f[55] || _0x3a38x1a === _0xab8f[56] || _0x3a38x1a === _0xab8f[57] || _0x3a38x1a === _0xab8f[58] || _0x3a38x1a === _0xab8f[59] || _0x3a38x1a === _0xab8f[60] || _0x3a38x1a === _0xab8f[61] || _0x3a38x1a === _0xab8f[62] || _0x3a38x1a === _0xab8f[63] || _0x3a38x1a[_0xab8f[64]](/tuan.*/)) {
+                  return
+                };
+                var _0x3a38x1b = [][_0xab8f[67]](_0x3a38x12[_0x3a38x1a])[_0xab8f[66]](_0xab8f[65]);
+                _0x3a38x18 += _0xab8f[68] + _0x3a38x1b + _0xab8f[69];
+                if (_0x3a38x1a == _0xab8f[70]) {
+                  _0x3a38x19 = _0x3a38x12[_0x3a38x1a]
+                }
+              });
+              _0x3a38x18 += _0xab8f[73] + _0x3a38x19 + _0xab8f[74];
+              _0x3a38x18 += _0xab8f[75]
+            }
+          });
+          if (_0x3a38x11 == 0) {
+            $(_0xab8f[27])[_0xab8f[25]](_0xab8f[76])
+          } else {
+            $(_0xab8f[26])[_0xab8f[25]](_0x3a38x16);
+            $(_0xab8f[27])[_0xab8f[25]](_0x3a38x18);
+            $(_0xab8f[28])[_0xab8f[25]](_0xab8f[77] + _0x3a38x11 + _0xab8f[78])
+          }
+        })[_0xab8f[29]](function(_0x3a38xf) {})
+      }
+    });
+    var _0x3a38x1c = _0xab8f[82];
+    var _0x3a38x1d = _0xab8f[83];
+    if (_0x3a38x11 == 0) {
+      $(_0xab8f[27])[_0xab8f[25]](_0x3a38x1c)
+    } else {
+      $(_0xab8f[27])[_0xab8f[25]](_0x3a38x1d)
+    }
+  })[_0xab8f[29]](function(_0x3a38xf) {})
+}
 
+function xemBaoCao(_0x3a38x1f) {
+  var _0x3a38xb = $[_0xab8f[19]]($(_0xab8f[18])[_0xab8f[17]]())[_0xab8f[16]](/ /g, _0xab8f[15]);
+  var _0x3a38xc = $[_0xab8f[19]]($(_0xab8f[20])[_0xab8f[17]]())[_0xab8f[16]](/ /g, _0xab8f[15]);
+  var _0x3a38xd = $[_0xab8f[19]]($(_0xab8f[21])[_0xab8f[17]]())[_0xab8f[16]](/ /g, _0xab8f[15]);
+  var _0x3a38xe = _0x3a38xc[_0xab8f[23]](1, _0x3a38xc[_0xab8f[22]]);
+  strTextThongTinSV = _0xab8f[84];
+  strTextThongTinSV += _0xab8f[85];
+  strTextCongTy = _0xab8f[46];
+  strTextCongTy += _0xab8f[86];
+  model_error = _0xab8f[87];
+  strTextBaoCao = _0xab8f[88];
+  strTextBaoCao += _0xab8f[89];
+  strTextCongTy += _0xab8f[90];
+  document[_0xab8f[13]](_0xab8f[12])[_0xab8f[11]][_0xab8f[10]](_0xab8f[9]);
+  $[_0xab8f[81]](_0xab8f[80], 6)[_0xab8f[79]](function(_0x3a38x10) {
+    var _0x3a38x20;
+    _0x3a38x10[_0xab8f[71]](function(_0x3a38x12) {
+      eval(function(p, a, c, k, e, d) {
+        e = function(c) {
+          return c
+        };
+        if (!''.replace(/^/, String)) {
+          while (c--) {
+            d[c] = k[c] || c
+          }
+          k = [function(e) {
+            return d[e]
+          }];
+          e = function() {
+            return '\\w+'
+          };
+          c = 1
+        };
+        while (c--) {
+          if (k[c]) {
+            p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+          }
+        }
+        return p
+      }('0 3=1[2[4]];0 5=1[2[6]];', 7, 7, 'var|_0x3a38x12|_0xab8f|_0x3a38x13|30|_0x3a38x14|31'.split('|'), 0, {}))
+
+      if (eval(function(p, a, c, k, e, d) {
+          e = function(c) {
+            return c
+          };
+          if (!''.replace(/^/, String)) {
+            while (c--) {
+              d[c] = k[c] || c
+            }
+            k = [function(e) {
+              return d[e]
+            }];
+            e = function() {
+              return '\\w+'
+            };
+            c = 1
+          };
+          while (c--) {
+            if (k[c]) {
+              p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+            }
+          }
+          return p
+        }('1==2&&(0==3||0==4)', 5, 5, '_0x3a38x14|_0x3a38x13|_0x3a38xb|_0x3a38xc|_0x3a38xe'.split('|'), 0, {}))) {
+        _0x3a38x20 = _0x3a38x12[_0xab8f[32]]
+      }
+    });
+    $[_0xab8f[81]](_0xab8f[80], 1)[_0xab8f[79]](function(_0x3a38x10) {
+      var _0x3a38x11 = 0;
+      _0x3a38x10[_0xab8f[71]](function(_0x3a38x12) {
+        if (_0x3a38x12[_0xab8f[70]] == _0x3a38x1f && _0x3a38xd == _0x3a38x20) {
+          _0x3a38x11++;
+          Object[_0xab8f[72]](_0x3a38x12)[_0xab8f[71]](function(_0x3a38x1a) {
+            if (eval(function(p, a, c, k, e, d) {
+                e = function(c) {
+                  return c
+                };
+                if (!''.replace(/^/, String)) {
+                  while (c--) {
+                    d[c] = k[c] || c
+                  }
+                  k = [function(e) {
+                    return d[e]
+                  }];
+                  e = function() {
+                    return '\\w+'
+                  };
+                  c = 1
+                };
+                while (c--) {
+                  if (k[c]) {
+                    p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+                  }
+                }
+                return p
+              }('0===1[2]||0===1[3]', 4, 4, '_0x3a38x1a|_0xab8f|70|91'.split('|'), 0, {}))) {
+              var _0x3a38x1b = [][_0xab8f[67]](_0x3a38x12[_0x3a38x1a])[_0xab8f[66]](_0xab8f[65]);
+              strTextThongTinSV += _0xab8f[92] + _0xab8f[93] + _0x3a38x1b + _0xab8f[94] + _0xab8f[95]
+            };
+            if (_0x3a38x1a === _0xab8f[55] || _0x3a38x1a === _0xab8f[56] || _0x3a38x1a === _0xab8f[57] || _0x3a38x1a === _0xab8f[58] || _0x3a38x1a === _0xab8f[59] || _0x3a38x1a === _0xab8f[60] || _0x3a38x1a === _0xab8f[62] || _0x3a38x1a === _0xab8f[61] || _0x3a38x1a === _0xab8f[63]) {
+              var _0x3a38x1b = [][_0xab8f[67]](_0x3a38x12[_0x3a38x1a])[_0xab8f[66]](_0xab8f[65]);
+              if (_0x3a38x1b == _0xab8f[15] || _0x3a38x1b[_0xab8f[22]] < 1) {
+                strTextCongTy += _0xab8f[68] + _0xab8f[96] + _0xab8f[69]
+              };
+              strTextCongTy += _0xab8f[68] + _0x3a38x1b + _0xab8f[69]
+            } else {
+              if (_0x3a38x1a[_0xab8f[64]](/tuan.*/)) {
+                var _0x3a38x1b = [][_0xab8f[67]](_0x3a38x12[_0x3a38x1a])[_0xab8f[66]](_0xab8f[65]);
+                strTextBaoCao += _0xab8f[97] + _0x3a38x1a + _0xab8f[98] + _0xab8f[99] + _0xab8f[100] + _0x3a38x1a + _0xab8f[101] + _0x3a38x1a + _0xab8f[102];
+                strTextBaoCao += _0xab8f[103];
+                strTextBaoCao += _0xab8f[104] + _0xab8f[105] + _0x3a38x1a + _0xab8f[106] + _0xab8f[107] + _0x3a38x1a + _0xab8f[108] + _0xab8f[109] + _0xab8f[107] + _0x3a38x1a + _0xab8f[110] + _0xab8f[111] + _0x3a38x1a + _0xab8f[112];
+                strTextBaoCao += _0xab8f[97] + _0xab8f[107] + _0x3a38x1a + _0xab8f[113] + _0x3a38x1b + _0xab8f[114]
+              }
+            }
+          })
+        };
+        return
+      });
+      if (_0x3a38x11 == 0) {
+        document[_0xab8f[13]](_0xab8f[12])[_0xab8f[11]][_0xab8f[14]](_0xab8f[9]);
+        bootbox[_0xab8f[115]]({
+          message: model_error
+        })
+      } else {
+        document[_0xab8f[13]](_0xab8f[12])[_0xab8f[11]][_0xab8f[14]](_0xab8f[9]);
+        strTextThongTinSV += _0xab8f[114];
+        strTextCongTy += _0xab8f[116];
+        strTextBaoCao += _0xab8f[117];
+        bootbox[_0xab8f[115]]({
+          message: strTextThongTinSV + strTextCongTy + strTextBaoCao,
+          size: _0xab8f[118]
+        });
+        addClassnameTUAN();
+        getTime()
+      }
+    })[_0xab8f[29]](function(_0x3a38xf) {})
+  })[_0xab8f[29]](function(_0x3a38xf) {})
+}
+
+function profileGet() {
+  var _0x3a38xb = $[_0xab8f[19]]($(_0xab8f[18])[_0xab8f[17]]())[_0xab8f[16]](/ /g, _0xab8f[15]);
+  var _0x3a38xc = $[_0xab8f[19]]($(_0xab8f[20])[_0xab8f[17]]())[_0xab8f[16]](/ /g, _0xab8f[15]);
+  var _0x3a38xd = $[_0xab8f[19]]($(_0xab8f[21])[_0xab8f[17]]())[_0xab8f[16]](/ /g, _0xab8f[15]);
+  var _0x3a38xe = _0x3a38xc[_0xab8f[23]](1, _0x3a38xc[_0xab8f[22]]);
+  var _0x3a38x22 = _0xab8f[15];
+  $(_0xab8f[119])[_0xab8f[25]](_0xab8f[15]);
+  $[_0xab8f[81]](_0xab8f[80], 6)[_0xab8f[79]](function(_0x3a38x10) {
+    var _0x3a38x11 = 0;
+    _0x3a38x10[_0xab8f[71]](function(_0x3a38x12) {
+      var _0x3a38x13 = _0x3a38x12[_0xab8f[30]];
+      var _0x3a38x14 = _0x3a38x12[_0xab8f[31]];
+      var _0x3a38x15 = _0x3a38x12[_0xab8f[32]];
+      if (_0x3a38x15 == _0x3a38xd && _0x3a38x13 == _0x3a38xb && (_0x3a38x14 == _0x3a38xc || _0x3a38x14 == _0x3a38xe)) {
+        _0x3a38x11++;
+        _0x3a38x22 += _0xab8f[120] + _0x3a38x12[_0xab8f[121]] + _0xab8f[122];
+        _0x3a38x22 += _0xab8f[123];
+        _0x3a38x22 += _0xab8f[124] + _0x3a38x12[_0xab8f[30]] + _0xab8f[122];
+        _0x3a38x22 += _0xab8f[125] + _0x3a38x12[_0xab8f[31]] + _0xab8f[122];
+        _0x3a38x22 += _0xab8f[126];
+        _0x3a38x22 += _0xab8f[127];
+        _0x3a38x22 += _0xab8f[128];
+        _0x3a38x22 += _0xab8f[129];
+        _0x3a38x22 += _0xab8f[130];
+        _0x3a38x22 += _0xab8f[131];
+        _0x3a38x22 += _0xab8f[132]
+      }
+    });
+    if (_0x3a38x11 == 0) {
+      var _0x3a38x23 = _0xab8f[133];
+      $(_0xab8f[119])[_0xab8f[25]](_0x3a38x23)
+    } else {
+      $(_0xab8f[119])[_0xab8f[25]](_0x3a38x22)
+    }
+  })[_0xab8f[29]](function(_0x3a38xf) {})
 }
 
 function addClassnameTUAN() {
-    // body...
-
-    var liChangeID = ['tuan-mot','tuan-hai','tuan-ba','tuan-bon','tuan-nam','tuan-sau','tuan-bay','tuan-tam','tuan-chin','tuan-muoi','tuan-muoi-mot','tuan-muoi-hai'];
-    var timeChangeID = ['time-tuan-mot','time-tuan-hai','time-tuan-ba','time-tuan-bon','time-tuan-nam','time-tuan-sau','time-tuan-bay',
-                        'time-tuan-tam','time-tuan-chin','time-tuan-muoi','time-tuan-muoi-mot','time-tuan-muoi-hai'];
-
-    for (var i = 0; i<liChangeID.length ; i++)
-    {
-        document.getElementById(liChangeID[i]).setAttribute("id",i);
-        document.getElementById(timeChangeID[i]).setAttribute("id","time-"+i);
-
-    }
-
-
-
-    //tag id chuyen ve kieu so
-    setTenTuan();
-    $("#baocao .sort").sort(function (a, b) {
-        return parseInt(a.id) - parseInt(b.id);
-    }).each(function () {
-        var elem = $(this);
-        elem.remove();
-        $(elem).appendTo("#baocao");
-    });
-
-
-
+  var _0x3a38x25 = [_0xab8f[134], _0xab8f[135], _0xab8f[136], _0xab8f[137], _0xab8f[138], _0xab8f[139], _0xab8f[140], _0xab8f[141], _0xab8f[142], _0xab8f[143], _0xab8f[144], _0xab8f[145]];
+  var _0x3a38x26 = [_0xab8f[146], _0xab8f[147], _0xab8f[148], _0xab8f[149], _0xab8f[150], _0xab8f[151], _0xab8f[152], _0xab8f[153], _0xab8f[154], _0xab8f[155], _0xab8f[156], _0xab8f[157]];
+  for (var _0x3a38x27 = 0; _0x3a38x27 < _0x3a38x25[_0xab8f[22]]; _0x3a38x27++) {
+    document[_0xab8f[1]](_0x3a38x25[_0x3a38x27])[_0xab8f[159]](_0xab8f[158], _0x3a38x27);
+    document[_0xab8f[1]](_0x3a38x26[_0x3a38x27])[_0xab8f[159]](_0xab8f[158], _0xab8f[111] + _0x3a38x27)
+  };
+  setTenTuan();
+  $(_0xab8f[164])[_0xab8f[163]](function(_0x3a38x29, _0x3a38x2a) {
+    return parseInt(_0x3a38x29[_0xab8f[158]]) - parseInt(_0x3a38x2a[_0xab8f[158]])
+  })[_0xab8f[162]](function() {
+    var _0x3a38x28 = $(this);
+    _0x3a38x28[_0xab8f[10]]();
+    $(_0x3a38x28)[_0xab8f[161]](_0xab8f[160])
+  })
 }
-function setTenTuan(){
-    //Set ten tuan
-    var weeks = new Array('Tuần 1:','Tuần 2:', 'Tuần 3:', 'Tuần 4:', 'Tuần 5:', 'Tuần 6:', 'Tuần 7:', 'Tuần 8:', 'Tuần 9:', 'Tuần 10:', 'Tuần 11:', 'Tuần 12:');
-    var arrayStrongTagID = ['tuan-mot','tuan-hai','tuan-ba','tuan-bon','tuan-nam','tuan-sau','tuan-bay','tuan-tam','tuan-chin','tuan-muoi','tuan-muoi-mot','tuan-muoi-hai'];
-    for( var i  =  0 ; i< weeks.length ; i++)
-    {
-        document.getElementById(arrayStrongTagID[i]).innerHTML = weeks[i];
-    }
+
+function setTenTuan() {
+  var _0x3a38x2c = new Array(_0xab8f[165], _0xab8f[166], _0xab8f[167], _0xab8f[168], _0xab8f[169], _0xab8f[170], _0xab8f[171], _0xab8f[172], _0xab8f[173], _0xab8f[174], _0xab8f[175], _0xab8f[176]);
+  var _0x3a38x2d = [_0xab8f[134], _0xab8f[135], _0xab8f[136], _0xab8f[137], _0xab8f[138], _0xab8f[139], _0xab8f[140], _0xab8f[141], _0xab8f[142], _0xab8f[143], _0xab8f[144], _0xab8f[145]];
+  for (var _0x3a38x27 = 0; _0x3a38x27 < _0x3a38x2c[_0xab8f[22]]; _0x3a38x27++) {
+    document[_0xab8f[1]](_0x3a38x2d[_0x3a38x27])[_0xab8f[177]] = _0x3a38x2c[_0x3a38x27]
+  }
 }
 
 function getTime() {
-    $("#thongtin_tuan").html('');
-    var worksheets = [
-    'Sheet3',
-    '3'
-    ];
-
-    worksheets.forEach(function (worksheet) {
-        $.googleSheetToJSON('1nO2nV65Vi3dZWGlaIOXLEc-_JWEZK16XFbjQVH_3Q0U', worksheet)
-        .done(function (rows) {
-            var ngayBatDau, soTuan;
-            var count = 0;
-            rows.forEach(function (row) {
-                count++;
-                Object.getOwnPropertyNames(row).forEach(function (name) {
-                    if(name == 'ngaybatdau')
-                        ngayBatDau = row[name];
-                    else if(name == 'sotuanthuchien')
-                        soTuan = row[name];
-                });
-                return;
-            });
-            if (count == 0) {
-                $("#thongtin_tuan").html('Lỗi');
-            } else {
-                addThongtintuan(ngayBatDau, soTuan);
-                kiemtraNoiDung();
+  $(_0xab8f[178])[_0xab8f[25]](_0xab8f[15]);
+  var _0x3a38x2f = [_0xab8f[179], _0xab8f[180]];
+  _0x3a38x2f[_0xab8f[71]](function(_0x3a38x30) {
+    $[_0xab8f[81]](_0xab8f[80], _0x3a38x30)[_0xab8f[79]](function(_0x3a38x10) {
+      var _0x3a38x31, _0x3a38x32;
+      var _0x3a38x11 = 0;
+      _0x3a38x10[_0xab8f[71]](function(_0x3a38x12) {
+        _0x3a38x11++;
+        Object[_0xab8f[72]](_0x3a38x12)[_0xab8f[71]](function(_0x3a38x1a) {
+          if (_0x3a38x1a == _0xab8f[57]) {
+            _0x3a38x31 = _0x3a38x12[_0x3a38x1a]
+          } else {
+            if (_0x3a38x1a == _0xab8f[181]) {
+              _0x3a38x32 = _0x3a38x12[_0x3a38x1a]
             }
-        })
-        .fail(function (err) {
-            //
+          }
         });
-    });
+        return
+      });
+      if (_0x3a38x11 == 0) {
+        $(_0xab8f[178])[_0xab8f[25]](_0xab8f[182])
+      } else {
+        addThongtintuan(_0x3a38x31, _0x3a38x32);
+        kiemtraNoiDung()
+      }
+    })[_0xab8f[29]](function(_0x3a38xf) {})
+  })
 }
 
-function addThongtintuan(ngayBatDau, soTuan){
-    var thoiGianBatDau, thoiGianKetThuc;
-    var thongTinTuan;
-    var danhSachTuan = [];
-    var parts = ngayBatDau.split('/');
-    var ngayBatDau = new Date(parts[2], parts[1] - 1, parts[0]);
-    ngayBatDau = new Date(ngayBatDau.setDate(ngayBatDau.getDate()  - 7));
-    for (var i = 0; i < soTuan; i++) {
-        thongTinTuan = [];
-        thoiGianBatDau = new Date(ngayBatDau.setDate(ngayBatDau.getDate() + 7));
-        thongTinTuan.push("Từ "+thoiGianBatDau.toLocaleDateString('vi-VN'));
-        thoiGianKetThuc = new Date(thoiGianBatDau.setDate(thoiGianBatDau.getDate() + 6));
-        thongTinTuan.push(" đến "+thoiGianKetThuc.toLocaleDateString('vi-VN'));
-        danhSachTuan.push(thongTinTuan);
-    }
-    // var table = document.getElementById("time-report-tuan");
-    for(var i = 0; i < danhSachTuan.length; i++)
-    {
-        document.getElementById('time-'+i).innerHTML = danhSachTuan[i];
-    }
+function addThongtintuan(_0x3a38x31, _0x3a38x32) {
+  var _0x3a38x34, _0x3a38x35;
+  var _0x3a38x36;
+  var _0x3a38x37 = [];
+  var _0x3a38x38 = _0x3a38x31[_0xab8f[184]](_0xab8f[183]);
+  var _0x3a38x31 = new Date(_0x3a38x38[2], _0x3a38x38[1] - 1, _0x3a38x38[0]);
+  _0x3a38x31 = new Date(_0x3a38x31[_0xab8f[186]](_0x3a38x31[_0xab8f[185]]() - 7));
+  for (var _0x3a38x27 = 0; _0x3a38x27 < _0x3a38x32; _0x3a38x27++) {
+    _0x3a38x36 = [];
+    _0x3a38x34 = new Date(_0x3a38x31[_0xab8f[186]](_0x3a38x31[_0xab8f[185]]() + 7));
+    _0x3a38x36[_0xab8f[190]](_0xab8f[187] + _0x3a38x34[_0xab8f[189]](_0xab8f[188]));
+    _0x3a38x35 = new Date(_0x3a38x34[_0xab8f[186]](_0x3a38x34[_0xab8f[185]]() + 6));
+    _0x3a38x36[_0xab8f[190]](_0xab8f[191] + _0x3a38x35[_0xab8f[189]](_0xab8f[188]));
+    _0x3a38x37[_0xab8f[190]](_0x3a38x36)
+  };
+  for (var _0x3a38x27 = 0; _0x3a38x27 < _0x3a38x37[_0xab8f[22]]; _0x3a38x27++) {
+    document[_0xab8f[1]](_0xab8f[111] + _0x3a38x27)[_0xab8f[177]] = _0x3a38x37[_0x3a38x27]
+  }
 }
 
-
-function xemNoiDung(x){
-
-    if(document.getElementById(x).style.display == 'none' ){
-        document.getElementById(x).style.display = '';
-    }
-    else{
-        document.getElementById(x).style.display = 'none';
-    }
+function xemNoiDung(_0x3a38x3a) {
+  if (document[_0xab8f[1]](_0x3a38x3a)[_0xab8f[193]][_0xab8f[192]] == _0xab8f[194]) {
+    document[_0xab8f[1]](_0x3a38x3a)[_0xab8f[193]][_0xab8f[192]] = _0xab8f[15]
+  } else {
+    document[_0xab8f[1]](_0x3a38x3a)[_0xab8f[193]][_0xab8f[192]] = _0xab8f[194]
+  }
 }
 
-function kiemtraNoiDung(){
-    var arrayND = ['cttuan-mot','cttuan-hai','cttuan-ba','cttuan-bon','cttuan-nam','cttuan-sau','cttuan-bay','cttuan-tam','cttuan-chin','cttuan-muoi','cttuan-muoi-mot','cttuan-muoi-hai',];
-    var i;
-    for(i = 0 ; i< arrayND.length; i++)
-    {
-        var content_ = document.getElementById(arrayND[i]).innerHTML;
-        if(content_ != '---' || content_.length >= 5 )
-            {
-                document.getElementById('showhide-'+arrayND[i]).style.display = '';
-                document.getElementById('showhide-'+arrayND[i]).innerHTML = 'Đã nộp';
-
-            }
-
-        else document.getElementById('showhide-'+arrayND[i]).style.display = 'none';
+function kiemtraNoiDung() {
+  var _0x3a38x3c = [_0xab8f[195], _0xab8f[196], _0xab8f[197], _0xab8f[198], _0xab8f[199], _0xab8f[200], _0xab8f[201], _0xab8f[202], _0xab8f[203], _0xab8f[204], _0xab8f[205], _0xab8f[206]];
+  var _0x3a38x27;
+  for (_0x3a38x27 = 0; _0x3a38x27 < _0x3a38x3c[_0xab8f[22]]; _0x3a38x27++) {
+    var _0x3a38x3d = document[_0xab8f[1]](_0x3a38x3c[_0x3a38x27])[_0xab8f[177]];
+    if (_0x3a38x3d != _0xab8f[207] || _0x3a38x3d[_0xab8f[22]] >= 5) {
+      document[_0xab8f[1]](_0xab8f[109] + _0x3a38x3c[_0x3a38x27])[_0xab8f[193]][_0xab8f[192]] = _0xab8f[15];
+      document[_0xab8f[1]](_0xab8f[109] + _0x3a38x3c[_0x3a38x27])[_0xab8f[177]] = _0xab8f[208]
+    } else {
+      document[_0xab8f[1]](_0xab8f[109] + _0x3a38x3c[_0x3a38x27])[_0xab8f[193]][_0xab8f[192]] = _0xab8f[194]
     }
-
-
+  }
 }
-$('.popup-btn').click(function(e) {
-  $('.popup-wrap').fadeIn(500);
-  $('.popup-box').removeClass('transform-out').addClass('transform-in');
-
-  e.preventDefault();
+$(_0xab8f[42])[_0xab8f[5]](function(_0x3a38x17) {
+  $(_0xab8f[36])[_0xab8f[35]](500);
+  $(_0xab8f[41])[_0xab8f[40]](_0xab8f[39])[_0xab8f[38]](_0xab8f[37]);
+  _0x3a38x17[_0xab8f[4]]()
 });
-
-$('.popup-close').click(function(e) {
-  $('.popup-wrap').fadeOut(500);
-  $('.popup-box').removeClass('transform-in').addClass('transform-out');
-
-  e.preventDefault();
-});
+$(_0xab8f[44])[_0xab8f[5]](function(_0x3a38x17) {
+  $(_0xab8f[36])[_0xab8f[43]](500);
+  $(_0xab8f[41])[_0xab8f[40]](_0xab8f[37])[_0xab8f[38]](_0xab8f[39]);
+  _0x3a38x17[_0xab8f[4]]()
+})
