@@ -280,12 +280,9 @@ function profileGet(){
                 var strDT = row['gvdienthoai'];
                 var strPass = row['gvhash'];
 
-                // if (strPass == pass)
                 if (strPass == pass && strEmail == email && (strDT == sdt || strDT == sdt1)) {
                       count++;
 
-                        //$("input[name=txtGVEmail_Profile]").val(row['gvemail']);
-                        // var val = row['gvemail'];
                         strTextProfile += "<div class='form-wrapper' style='display:none;'> <label for='txtIDGV'>Mã giảng viên</label> <input id='idgv_prof' type='text' name='txtIDGV' class='form-control' readonly value="+row['idgv']+"> </div>";
 
                         strTextProfile += "<h3 style='text-align:center;COLOR:darkred'>THÔNG TIN GIẢNG VIÊN</h3>";
